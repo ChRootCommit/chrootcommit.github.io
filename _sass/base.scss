@@ -271,3 +271,11 @@ a:active, a:focus {
 #wrapper {
   min-height: calc(100vh - 100px);
 }
+
+img, #profile{
+  width: 100px;
+   clip-path:ellipse(50% 35%);
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
