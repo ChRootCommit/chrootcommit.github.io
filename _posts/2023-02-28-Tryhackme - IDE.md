@@ -173,7 +173,7 @@ User drac may run the following commands on ide:
     (ALL : ALL) /usr/sbin/service vsftpd restart
 
 ```
-I thought I could modify the vsftp service throught edition of /etc/systemd/system/vsftpd.service file but I could not write in this file. Then, In despair I launched linpeas and got the real service file I must edit to gain root access :
+I thought I could modify the vsftp service throught edition of /etc/systemd/system/vsftpd.service file but I could not write in this file. Then, In despair I launched linpeas and got the real service file config I must edit to gain root access :
 ```
 /lib/systemd/system/vsftpd.service 
 ```
