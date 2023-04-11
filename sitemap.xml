@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://test.com/</loc>
+    <loc>https://chrootcommit.github.io/</loc>
     <lastmod>2023-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://test.com/posts/</loc>
+    <loc>https://chrootcommit.github.io/posts/</loc>
     <lastmod>2023-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://test.com/posts/2023-03-20-wolvctf2023/</loc>
+    <loc>https://chrootcommit.github.io/posts/2023-03-20-wolvctf2023/</loc>
     <lastmod>2023-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://test.com/posts/2023-03-01-hackthebox-wrong_spooky_season/</loc>
+    <loc>https://chrootcommit.github.io/posts/2023-03-01-hackthebox-wrong_spooky_season/</loc>
     <lastmod>2023-03-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://test.com/posts/2023-02-28-tryhackme-ide/</loc>
+    <loc>https://chrootcommit.github.io/posts/2023-02-28-tryhackme-ide/</loc>
     <lastmod>2023-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://test.com/posts/about/</loc>
+    <loc>https://chrootcommit.github.io/posts/about/</loc>
     <lastmod>2023-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://test.com/categories/</loc>
+    <loc>https://chrootcommit.github.io/categories/</loc>
   </url><url>
-    <loc>https://test.com/tags/</loc>
+    <loc>https://chrootcommit.github.io/tags/</loc>
   </url>
 </urlset>
