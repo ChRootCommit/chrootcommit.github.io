@@ -6,7 +6,16 @@
     <description>Recent content on chrootcommit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://chrootcommit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Apr 2023 15:20:21 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>THM - The Cod Caper</title>
+      <link>https://chrootcommit.github.io/posts/thm-the_code_caper/</link>
+      <pubDate>Wed, 12 Apr 2023 15:20:21 -0400</pubDate>
+      
+      <guid>https://chrootcommit.github.io/posts/thm-the_code_caper/</guid>
+      <description>Host Enumeration ┌──(kali㉿kali)-[~] └─$ sudo nmap -p- -v 10.10.10.196 -A Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-12 12:34 EDT NSE: Loaded 155 scripts for scanning. NSE: Script Pre-scanning. Initiating NSE at 12:34 Completed NSE at 12:34, 0.00s elapsed Initiating NSE at 12:34 Completed NSE at 12:34, 0.00s elapsed Initiating NSE at 12:34 Completed NSE at 12:34, 0.00s elapsed Initiating Ping Scan at 12:34 Scanning 10.10.10.196 [4 ports] Completed Ping Scan at 12:34, 0.</description>
+    </item>
+    
     <item>
       <title>WolvCTF 2023 - Writeup</title>
       <link>https://chrootcommit.github.io/posts/2023-03-20-wolvctf2023/</link>
