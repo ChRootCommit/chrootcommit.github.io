@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HeroCTFv5 on chrootcommit</title>
+    <link>https://chrootcommit.github.io/tags/heroctfv5/</link>
+    <description>Recent content in HeroCTFv5 on chrootcommit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 May 2023 19:31:35 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/heroctfv5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HeroCTFv5 Blogodogo1</title>
+      <link>https://chrootcommit.github.io/posts/heroctfv5-blogodogo1/</link>
+      <pubDate>Sun, 14 May 2023 19:31:35 -0400</pubDate>
+      
+      <guid>https://chrootcommit.github.io/posts/heroctfv5-blogodogo1/</guid>
+      <description>under B0rn2PwnCTF team
+Overview Try to see the content of the secret note of the administator user.
+(We have the website&amp;rsquo;s source code)
+Idor exploitation We can try to enumerate all author&amp;rsquo;s id to find the admin&amp;rsquo;s posts. Here, we used burp intruder with sniper as attack type and payload of numbers :
+Generate time based hash of a post It sounds good, we found the admin&amp;rsquo;s Secret blog post, but this last was indicated as draft and we could not access to the draft post of another user.</description>
+    </item>
+    
+  </channel>
+</rss>
