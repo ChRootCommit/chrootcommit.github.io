@@ -5,6 +5,52 @@
     <link>https://chrootcommit.github.io/tags/</link>
     <description>Recent content in Tags on chrootcommit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://chrootcommit.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forensic</title>
+      <link>https://chrootcommit.github.io/tags/forensic/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://chrootcommit.github.io/tags/forensic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reverse</title>
+      <link>https://chrootcommit.github.io/tags/reverse/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://chrootcommit.github.io/tags/reverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stegaography</title>
+      <link>https://chrootcommit.github.io/tags/stegaography/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://chrootcommit.github.io/tags/stegaography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>https://chrootcommit.github.io/tags/web/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://chrootcommit.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wolvCTF2023</title>
+      <link>https://chrootcommit.github.io/tags/wolvctf2023/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://chrootcommit.github.io/tags/wolvctf2023/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
