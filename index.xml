@@ -6,7 +6,41 @@
     <description>Recent content on chrootcommit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 May 2023 19:31:35 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 13:47:48 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DUCTF2023 Web Actually_Proxed</title>
+      <link>https://chrootcommit.github.io/posts/ductf2023-web-actually_proxed/</link>
+      <pubDate>Mon, 04 Sep 2023 13:47:48 -0400</pubDate>
+      
+      <guid>https://chrootcommit.github.io/posts/ductf2023-web-actually_proxed/</guid>
+      <description>Team: XxxPassword123xxX
+Difficulty: easy
+Code analysis Secret server&amp;rsquo;s code :
+package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strings&amp;#34; ) var ( port = flag.Int(&amp;#34;port&amp;#34;, 8081, &amp;#34;port to listen on&amp;#34;) ) func main() { flag.Parse() http.HandleFunc(&amp;#34;/&amp;#34;, func(w http.ResponseWriter, r *http.Request) { xff := r.Header.Values(&amp;#34;X-Forwarded-For&amp;#34;) ip := strings.Split(r.RemoteAddr, &amp;#34;:&amp;#34;)[0] if xff != nil { ips := strings.Split(xff[len(xff)-1], &amp;#34;, &amp;#34;) ip = ips[len(ips)-1] ip = strings.TrimSpace(ip) } // 1337 hax0rz 0nly! if ip !</description>
+    </item>
+    
+    <item>
+      <title>DUCTF2023 Web Static_File_Server</title>
+      <link>https://chrootcommit.github.io/posts/ductf2023-web-static_file_server/</link>
+      <pubDate>Mon, 04 Sep 2023 13:30:58 -0400</pubDate>
+      
+      <guid>https://chrootcommit.github.io/posts/ductf2023-web-static_file_server/</guid>
+      <description>Team: XxxPassword123xxX
+Difficulty: easy
+Code analysis from aiohttp import web async def index(request): return web.Response(body=&amp;#39;&amp;#39;&amp;#39; &amp;lt;header&amp;gt;&amp;lt;h1&amp;gt;static file server&amp;lt;/h1&amp;gt;&amp;lt;/header&amp;gt; Here are some files: &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;img src=&amp;#34;/files/ductf.png&amp;#34;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;/files/not_the_flag.txt&amp;#34;&amp;gt;not the flag&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;#39;&amp;#39;&amp;#39;, content_type=&amp;#39;text/html&amp;#39;, status=200) app = web.Application() app.add_routes([ web.get(&amp;#39;/&amp;#39;, index), # this is handled by https://github.com/aio-libs/aiohttp/blob/v3.8.5/aiohttp/web_urldispatcher.py#L654-L690 web.static(&amp;#39;/files&amp;#39;, &amp;#39;./files&amp;#39;, follow_symlinks=True) ]) web.run_app(app) According to the code, the route /files gives access to static files. It maybe vulnerable to path traversal, let&amp;rsquo;s exploit it throught BurpSuite :</description>
+    </item>
+    
+    <item>
+      <title>DUCTF2023 Web Proxed</title>
+      <link>https://chrootcommit.github.io/posts/ductf2023-web-proxed/</link>
+      <pubDate>Mon, 04 Sep 2023 13:00:02 -0400</pubDate>
+      
+      <guid>https://chrootcommit.github.io/posts/ductf2023-web-proxed/</guid>
+      <description>Team: XxxPassword123xxX
+Difficulty: easy
+Code analysis package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strings&amp;#34; ) var ( port = flag.Int(&amp;#34;port&amp;#34;, 8081, &amp;#34;The port to listen on&amp;#34;) ) func main() { flag.Parse() http.HandleFunc(&amp;#34;/&amp;#34;, func(w http.ResponseWriter, r *http.Request) { xff := r.Header.Values(&amp;#34;X-Forwarded-For&amp;#34;) ip := strings.Split(r.RemoteAddr, &amp;#34;:&amp;#34;)[0] if xff != nil { ips := strings.Split(xff[len(xff)-1], &amp;#34;, &amp;#34;) ip = ips[len(ips)-1] ip = strings.TrimSpace(ip) } if ip != &amp;#34;31.33.33.7&amp;#34; { message := fmt.</description>
+    </item>
+    
     <item>
       <title>HeroCTFv5 Blogodogo1</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-blogodogo1/</link>

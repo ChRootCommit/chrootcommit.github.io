@@ -3,21 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chrootcommit.github.io/</loc>
-    <lastmod>2023-05-14T19:31:35-04:00</lastmod>
+    <lastmod>2023-09-04T13:47:48-04:00</lastmod>
+  </url><url>
+    <loc>https://chrootcommit.github.io/tags/ductf2023/</loc>
+    <lastmod>2023-09-04T13:47:48-04:00</lastmod>
+  </url><url>
+    <loc>https://chrootcommit.github.io/posts/ductf2023-web-actually_proxed/</loc>
+    <lastmod>2023-09-04T13:47:48-04:00</lastmod>
+  </url><url>
+    <loc>https://chrootcommit.github.io/posts/</loc>
+    <lastmod>2023-09-04T13:47:48-04:00</lastmod>
+  </url><url>
+    <loc>https://chrootcommit.github.io/tags/</loc>
+    <lastmod>2023-09-04T13:47:48-04:00</lastmod>
+  </url><url>
+    <loc>https://chrootcommit.github.io/tags/web/</loc>
+    <lastmod>2023-09-04T13:47:48-04:00</lastmod>
+  </url><url>
+    <loc>https://chrootcommit.github.io/posts/ductf2023-web-static_file_server/</loc>
+    <lastmod>2023-09-04T13:30:58-04:00</lastmod>
+  </url><url>
+    <loc>https://chrootcommit.github.io/posts/ductf2023-web-proxed/</loc>
+    <lastmod>2023-09-04T13:00:02-04:00</lastmod>
   </url><url>
     <loc>https://chrootcommit.github.io/tags/heroctfv5/</loc>
     <lastmod>2023-05-14T19:31:35-04:00</lastmod>
   </url><url>
     <loc>https://chrootcommit.github.io/posts/heroctfv5-blogodogo1/</loc>
-    <lastmod>2023-05-14T19:31:35-04:00</lastmod>
-  </url><url>
-    <loc>https://chrootcommit.github.io/posts/</loc>
-    <lastmod>2023-05-14T19:31:35-04:00</lastmod>
-  </url><url>
-    <loc>https://chrootcommit.github.io/tags/</loc>
-    <lastmod>2023-05-14T19:31:35-04:00</lastmod>
-  </url><url>
-    <loc>https://chrootcommit.github.io/tags/web/</loc>
     <lastmod>2023-05-14T19:31:35-04:00</lastmod>
   </url><url>
     <loc>https://chrootcommit.github.io/posts/heroctfv5-drinkfrommyflask1/</loc>
