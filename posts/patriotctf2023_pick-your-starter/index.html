@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>[Patriotctf2023] Pick Your Starter // chrootcommit</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="chrootcommit" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1fe426fd82899b3823133b4b6fadb0e1f0d8332eecc710a4dfe43101ac5895e0.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Patriotctf2023] Pick Your Starter"/>
+<meta name="twitter:description" content="Team: XxxPassword123xxX
+Difficulty: medium
+Overview Lorsque l&rsquo;on entre un endpoint qui n&rsquo;existe pas l&rsquo;erreur 404 se déclenche et affiche notre endpoint.
+Exploitation de SSTI On tente l&rsquo;injection du calcul 7*7 pour s&rsquo;assurer que l&rsquo;on se trouve sur une SSTI :
+BlackList Après plusieurs tests, on constate que l&rsquo;application web blacklist ensemble de termes et caractères en renvoyant &ldquo;that&rsquo;s not a starter&rdquo;. Voici une liste de caractères filtrés :
+[ ] &#34; &#39; | builtins config Construction de la payload Il faut donc construire une payload :"/>
+
+    <meta property="og:title" content="[Patriotctf2023] Pick Your Starter" />
+<meta property="og:description" content="Team: XxxPassword123xxX
+Difficulty: medium
+Overview Lorsque l&rsquo;on entre un endpoint qui n&rsquo;existe pas l&rsquo;erreur 404 se déclenche et affiche notre endpoint.
+Exploitation de SSTI On tente l&rsquo;injection du calcul 7*7 pour s&rsquo;assurer que l&rsquo;on se trouve sur une SSTI :
+BlackList Après plusieurs tests, on constate que l&rsquo;application web blacklist ensemble de termes et caractères en renvoyant &ldquo;that&rsquo;s not a starter&rdquo;. Voici une liste de caractères filtrés :
+[ ] &#34; &#39; | builtins config Construction de la payload Il faut donc construire une payload :" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrootcommit.github.io/posts/patriotctf2023_pick-your-starter/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-11T16:54:19-04:00" />
+<meta property="article:modified_time" content="2023-09-11T16:54:19-04:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://chrootcommit.github.io/"><img class="app-header-avatar" src="/profile.png" alt="chrootcommit" /></a>
+      <span class="app-header-title">chrootcommit</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/posts/about">About</a>
+            -
+          
+          <a class="app-header-menu-item" href="/">Home</a>
+            -
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Junior Cybersecurity Consultant.</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ChRootCommit" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">[Patriotctf2023] Pick Your Starter</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 11, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://chrootcommit.github.io/tags/patriotctf2023/">PatriotCTF2023</a>
+              <a class="tag" href="https://chrootcommit.github.io/tags/web/">Web</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Team: XxxPassword123xxX</p>
+<p>Difficulty: medium</p>
+<h1 id="overview">Overview</h1>
+<img src="/patriotctf2023/pys_overview.png"  width="700" height="500">
+<p>Lorsque l&rsquo;on entre un endpoint qui n&rsquo;existe pas l&rsquo;erreur 404 se déclenche et affiche notre endpoint.</p>
+<h1 id="exploitation-de-ssti">Exploitation de SSTI</h1>
+<p>On tente l&rsquo;injection du calcul 7*7 pour s&rsquo;assurer que l&rsquo;on se trouve sur une SSTI :</p>
+<p><img src="/patriotctf2023/pys_42.png" alt=""></p>
+<h2 id="blacklist">BlackList</h2>
+<p><img src="/patriotctf2023/pys_blacklist.png" alt="">
+Après plusieurs tests, on constate que l&rsquo;application web blacklist ensemble de termes et caractères en renvoyant &ldquo;that&rsquo;s not a starter&rdquo;.
+Voici une liste de caractères filtrés :</p>
+<pre tabindex="0"><code>[
+]
+&#34;
+&#39;
+|
+builtins
+config
+</code></pre><h2 id="construction-de-la-payload">Construction de la payload</h2>
+<p>Il faut donc construire une payload :</p>
+<ul>
+<li>sans accéder à un élément d&rsquo;une liste ou attribut d&rsquo;un dictionnaire avec des brackets</li>
+<li>sans utiliser builtins et config <strong>directement dans le endpoint</strong></li>
+<li>sans utiliser de quotes</li>
+</ul>
+<p>Quelques élements pour bypasser la blackliste :</p>
+<ul>
+<li>utilisation de la fonction <strong>getitem</strong>() pour accéder à un attribut sans brackets</li>
+<li>injection de paramètres GET dans le <strong>getitem</strong>() pour pouvoir appeler <strong>builtins</strong> (à l&rsquo;extérieur de la SSTI) via <code>request.args.&lt;param&gt;</code></li>
+<li>par la même occasion, l&rsquo;injection de paramètre GET dans la SSTI nous permet de directement injecter des chaines de caractères sans utiliser de quotes</li>
+</ul>
+<p>Payload type :</p>
+<pre tabindex="0"><code>&lt;HTTP_HOST&gt;/{{self.__init__.__globals__.__getitem__(request.args.param).__getitem__(request.args.import)(request.args.os).popen(request.args.cmd).read()}}?param=__builtins__&amp;import=__import__&amp;os=os&amp;cmd=&lt;CMD&gt;
+</code></pre><h1 id="exploitation-">Exploitation :</h1>
+<p>Test de la payload :</p>
+<p><img src="/patriotctf2023/pys_test_payload.png" alt=""></p>
+<p>Après avoir listé les répertoires, on retrouve le flag à la racine :</p>
+<p><img src="/patriotctf2023/pys_ssti_flag.png" alt=""></p>
+<p>Flag : PCTF(wHOS7H47PoKEmoN)</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
