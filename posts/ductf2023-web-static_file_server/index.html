@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>DUCTF2023 Web Static_File_Server // chrootcommit</title>
+    <title>[DUCTF2023 - Web] Static_File_Server // chrootcommit</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.113.0">
@@ -12,12 +12,12 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="DUCTF2023 Web Static_File_Server"/>
+<meta name="twitter:title" content="[DUCTF2023 - Web] Static_File_Server"/>
 <meta name="twitter:description" content="Team: XxxPassword123xxX
 Difficulty: easy
 Code analysis from aiohttp import web async def index(request): return web.Response(body=&#39;&#39;&#39; &lt;header&gt;&lt;h1&gt;static file server&lt;/h1&gt;&lt;/header&gt; Here are some files: &lt;ul&gt; &lt;li&gt;&lt;img src=&#34;/files/ductf.png&#34;&gt;&lt;/img&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&#34;/files/not_the_flag.txt&#34;&gt;not the flag&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &#39;&#39;&#39;, content_type=&#39;text/html&#39;, status=200) app = web.Application() app.add_routes([ web.get(&#39;/&#39;, index), # this is handled by https://github.com/aio-libs/aiohttp/blob/v3.8.5/aiohttp/web_urldispatcher.py#L654-L690 web.static(&#39;/files&#39;, &#39;./files&#39;, follow_symlinks=True) ]) web.run_app(app) According to the code, the route /files gives access to static files. It maybe vulnerable to path traversal, let&rsquo;s exploit it throught BurpSuite :"/>
 
-    <meta property="og:title" content="DUCTF2023 Web Static_File_Server" />
+    <meta property="og:title" content="[DUCTF2023 - Web] Static_File_Server" />
 <meta property="og:description" content="Team: XxxPassword123xxX
 Difficulty: easy
 Code analysis from aiohttp import web async def index(request): return web.Response(body=&#39;&#39;&#39; &lt;header&gt;&lt;h1&gt;static file server&lt;/h1&gt;&lt;/header&gt; Here are some files: &lt;ul&gt; &lt;li&gt;&lt;img src=&#34;/files/ductf.png&#34;&gt;&lt;/img&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&#34;/files/not_the_flag.txt&#34;&gt;not the flag&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &#39;&#39;&#39;, content_type=&#39;text/html&#39;, status=200) app = web.Application() app.add_routes([ web.get(&#39;/&#39;, index), # this is handled by https://github.com/aio-libs/aiohttp/blob/v3.8.5/aiohttp/web_urldispatcher.py#L654-L690 web.static(&#39;/files&#39;, &#39;./files&#39;, follow_symlinks=True) ]) web.run_app(app) According to the code, the route /files gives access to static files. It maybe vulnerable to path traversal, let&rsquo;s exploit it throught BurpSuite :" />
@@ -57,7 +57,7 @@ Code analysis from aiohttp import web async def index(request): return web.Respo
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">DUCTF2023 Web Static_File_Server</h1>
+      <h1 class ="post-title">[DUCTF2023 - Web] Static_File_Server</h1>
       <div class="post-meta">
         <div>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">

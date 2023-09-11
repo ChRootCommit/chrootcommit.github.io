@@ -142,9 +142,9 @@ fetch(&#39;file:///ctf/app/config.json&#39;)
 <p><img src="/wolvctf/Dino_Trading_FTP_LIST.png" alt=""></p>
 <p>As you can see, there is an image epicfight.jpg.
 With RETR, the client downloads the epicfight.jpg image, We can see the image data in our pcap, we just had to save the image turning the data type into raw :</p>
-<!-- raw HTML omitted -->
+<img src="/wolvctf/Dino_Trading_Image.png"  width="700" height="600"/> 
 <p>Downloaded image :</p>
-<!-- raw HTML omitted -->
+<img src="/wolvctf/epicFight.jpg"  width="500" height="300">
 <p>Now, how to find the flag? It is an image, the first thing I thought was to attempt to extract some hidden data thanks to steghide, it asked me to enter a passphrase. Then, I used stegseek to crack the passphrase :</p>
 <pre tabindex="0"><code>stegseek epicFight.jpg /usr/share/wordlists/rockyou.txt
 StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
@@ -190,7 +190,7 @@ After getting into the pastebin link, I got the flag :</p>
 <p><img src="/wolvctf/Employee427_Locate_Download.png" alt=""></p>
 <p>There is a github repo : <a href="http://github.com/awesomecorp3234243523/private-documents">http://github.com/awesomecorp3234243523/private-documents</a>
 Finally this repository contains the flag : <a href="https://github.com/awesomecorp3234243523/private-documents/blob/main/profits_old.jpg">https://github.com/awesomecorp3234243523/private-documents/blob/main/profits_old.jpg</a></p>
-<!-- raw HTML omitted -->
+<img src="/wolvctf/profits_old.jpg"  width="500" height="400"/> 
 <h1 id="beginner">Beginner</h1>
 <h2 id="charlotteweb">Charlotte&rsquo;s Web</h2>
 <pre tabindex="0"><code>┌──(kali㉿kali)-[~/CTF/WolvCTF]

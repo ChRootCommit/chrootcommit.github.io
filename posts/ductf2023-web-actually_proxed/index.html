@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>DUCTF2023 Web Actually_Proxed // chrootcommit</title>
+    <title>[DUCTF2023 - Web] Actually_Proxed // chrootcommit</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.113.0">
@@ -12,13 +12,13 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="DUCTF2023 Web Actually_Proxed"/>
+<meta name="twitter:title" content="[DUCTF2023 - Web] Actually_Proxed"/>
 <meta name="twitter:description" content="Team: XxxPassword123xxX
 Difficulty: easy
 Code analysis Secret server&rsquo;s code :
 package main import ( &#34;flag&#34; &#34;fmt&#34; &#34;log&#34; &#34;net/http&#34; &#34;os&#34; &#34;strings&#34; ) var ( port = flag.Int(&#34;port&#34;, 8081, &#34;port to listen on&#34;) ) func main() { flag.Parse() http.HandleFunc(&#34;/&#34;, func(w http.ResponseWriter, r *http.Request) { xff := r.Header.Values(&#34;X-Forwarded-For&#34;) ip := strings.Split(r.RemoteAddr, &#34;:&#34;)[0] if xff != nil { ips := strings.Split(xff[len(xff)-1], &#34;, &#34;) ip = ips[len(ips)-1] ip = strings.TrimSpace(ip) } // 1337 hax0rz 0nly! if ip !"/>
 
-    <meta property="og:title" content="DUCTF2023 Web Actually_Proxed" />
+    <meta property="og:title" content="[DUCTF2023 - Web] Actually_Proxed" />
 <meta property="og:description" content="Team: XxxPassword123xxX
 Difficulty: easy
 Code analysis Secret server&rsquo;s code :
@@ -59,7 +59,7 @@ package main import ( &#34;flag&#34; &#34;fmt&#34; &#34;log&#34; &#34;net/http&#
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">DUCTF2023 Web Actually_Proxed</h1>
+      <h1 class ="post-title">[DUCTF2023 - Web] Actually_Proxed</h1>
       <div class="post-meta">
         <div>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">

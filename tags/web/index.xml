@@ -6,9 +6,21 @@
     <description>Recent content in Web on chrootcommit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Sep 2023 13:47:48 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 15:15:15 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DUCTF2023 Web Actually_Proxed</title>
+      <title>[PatriotCTF2023 - Web] flower Shop</title>
+      <link>https://chrootcommit.github.io/posts/patriotctf2023_flower-shop/</link>
+      <pubDate>Mon, 11 Sep 2023 15:15:15 -0400</pubDate>
+      
+      <guid>https://chrootcommit.github.io/posts/patriotctf2023_flower-shop/</guid>
+      <description>Team: XxxPassword123xxX
+Difficulty: medium
+Overview On a une application web dont on a accès au code source. Cette WebApp permet d&amp;rsquo;inscrire/s&amp;rsquo;authenfier et de réinitialiser son mot de passe. A l&amp;rsquo;inscription on fournit le webhook permettant de recevoir son nouveau mot de passe en cas de réinitialisation de ce dernier. Notre objectif est de pouvoir lire le fichier admin.php et récupérer le flag à l&amp;rsquo;intérieur.
+Analyse de code Filtre de l&amp;rsquo;input de webhook En analysant le code, on peut apercevoir un filtre sur la validation du format du webhook :</description>
+    </item>
+    
+    <item>
+      <title>[DUCTF2023 - Web] Actually_Proxed</title>
       <link>https://chrootcommit.github.io/posts/ductf2023-web-actually_proxed/</link>
       <pubDate>Mon, 04 Sep 2023 13:47:48 -0400</pubDate>
       
@@ -20,7 +32,7 @@ package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&
     </item>
     
     <item>
-      <title>DUCTF2023 Web Static_File_Server</title>
+      <title>[DUCTF2023 - Web] Static_File_Server</title>
       <link>https://chrootcommit.github.io/posts/ductf2023-web-static_file_server/</link>
       <pubDate>Mon, 04 Sep 2023 13:30:58 -0400</pubDate>
       
@@ -31,7 +43,7 @@ Code analysis from aiohttp import web async def index(request): return web.Respo
     </item>
     
     <item>
-      <title>DUCTF2023 Web Proxed</title>
+      <title>[DUCTF2023 - Web] Proxed</title>
       <link>https://chrootcommit.github.io/posts/ductf2023-web-proxed/</link>
       <pubDate>Mon, 04 Sep 2023 13:00:02 -0400</pubDate>
       
@@ -42,7 +54,7 @@ Code analysis package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34;
     </item>
     
     <item>
-      <title>HeroCTFv5 Blogodogo1</title>
+      <title>[HeroCTFv5 - Web] Blogodogo1</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-blogodogo1/</link>
       <pubDate>Sun, 14 May 2023 19:31:35 -0400</pubDate>
       
@@ -55,7 +67,7 @@ Generate time based hash of a post It sounds good, we found the admin&amp;rsquo;
     </item>
     
     <item>
-      <title>HeroCTFv5 DrinkFromMyFlask1</title>
+      <title>[HeroCTFv5 - Web] DrinkFromMyFlask1</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-drinkfrommyflask1/</link>
       <pubDate>Sun, 14 May 2023 18:49:09 -0400</pubDate>
       
@@ -66,7 +78,7 @@ You should probably be able to access the server hosting your target&amp;rsquo;s
     </item>
     
     <item>
-      <title>HeroCTFv5 Best Schools</title>
+      <title>[HeroCTFv5 - Web] Best Schools</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-best-school/</link>
       <pubDate>Sun, 14 May 2023 18:06:23 -0400</pubDate>
       

