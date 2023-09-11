@@ -17,8 +17,7 @@
 Difficulty: medium
 Overview Lorsque l&amp;rsquo;on entre un endpoint qui n&amp;rsquo;existe pas l&amp;rsquo;erreur 404 se déclenche et affiche notre endpoint.
 Exploitation de SSTI On tente l&amp;rsquo;injection du calcul 7*7 pour s&amp;rsquo;assurer que l&amp;rsquo;on se trouve sur une SSTI :
-BlackList Après plusieurs tests, on constate que l&amp;rsquo;application web blacklist ensemble de termes et caractères en renvoyant &amp;ldquo;that&amp;rsquo;s not a starter&amp;rdquo;. Voici une liste de caractères filtrés :
-[ ] &amp;#34; &amp;#39; | builtins config Construction de la payload Il faut donc construire une payload :</description>
+BlackList Après plusieurs tests, on constate que l&amp;rsquo;application web blacklist un ensemble de termes et de caractères en renvoyant &amp;ldquo;that&amp;rsquo;s not a starter&amp;rdquo;. Voici une liste de caractères filtrés :</description>
     </item>
     
     <item>
