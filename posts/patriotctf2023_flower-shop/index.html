@@ -168,7 +168,7 @@ Notre objectif est de pouvoir lire le fichier <code>admin.php</code> et récupé
 De là, on peut en déduire une injection de commande en contournant les filtres d&rsquo;url.</p>
 <h1 id="construction-de-la-payload">Construction de la Payload</h1>
 <p>Pour passer les filtres, il faut que la payload commence par une url quelquonque. Ensuite, on peut ajouter le caractère <code>;</code> pour enchainer par une autre commande.
-On fait aussi face à une contrainte, l&rsquo;un des filtres n&rsquo;accepte pas les espaces et les supprimes, donc il nous faut une payload pour le ficher <code>admin.php</code> sans utiliser d&rsquo;espace.</p>
+On fait aussi face à une contrainte, l&rsquo;un des filtres n&rsquo;accepte pas les espaces et les supprime, donc il nous faut une payload pour le ficher <code>admin.php</code> sans utiliser d&rsquo;espace.</p>
 <p>A travers mes divers tests en local  (docker), je me suis aperçu que pas mal de payloads sur <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Command%20Injection/README.md#bypass-without-space">PayloadAllTheThings</a> ne passaient pas car le <code>exec</code> utilise le shell sh. Cependant, j&rsquo;ai remarqué qu&rsquo;une payload de type <code>cat$IFS/etc/passwd</code> passe sur sh. J&rsquo;ai donc construit ma payload avec le séparateur $IFS dans le but de copier le contenu de <code>admin.php</code> vers un autre fichier.</p>
 <p>Voici une payload possible à injecter au webhook:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>http://127.0.0.1/;base64$IFS/var/www/html/admin.php&gt;../pwned.txt;echo
