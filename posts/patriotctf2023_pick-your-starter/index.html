@@ -118,8 +118,8 @@ config
 </ul>
 <p>Quelques élements pour bypasser la blackliste :</p>
 <ul>
-<li>utilisation de la fonction <strong>getitem</strong>() pour accéder à un attribut sans brackets</li>
-<li>injection de paramètres GET dans le <strong>getitem</strong>() pour pouvoir appeler <strong>builtins</strong> (à l&rsquo;extérieur de la SSTI) via <code>request.args.&lt;param&gt;</code></li>
+<li>utilisation de la fonction <code>__getitem__()</code> pour accéder à un attribut sans brackets</li>
+<li>injection de paramètres GET dans le <code>__getitem__()</code> pour pouvoir appeler <code>__builtins__</code> (à l&rsquo;extérieur de la SSTI) via <code>request.args.&lt;param&gt;</code></li>
 <li>par la même occasion, l&rsquo;injection de paramètre GET dans la SSTI nous permet de directement injecter des chaines de caractères sans utiliser de quotes</li>
 </ul>
 <p>Payload type :</p>
