@@ -13,7 +13,7 @@
       <link>https://chrootcommit.github.io/posts/midnightctf2024-web-cachecache/</link>
       <pubDate>Sun, 28 Apr 2024 14:31:07 -0400</pubDate>
       <guid>https://chrootcommit.github.io/posts/midnightctf2024-web-cachecache/</guid>
-      <description>Team : The Penetrators&#xA;Overview On a une application web flask d&amp;rsquo;affichage de notes avec la possibilité de faire consulter les notes par un bot selenium. L&amp;rsquo;objectif est de voler le cookie du bot.&#xA;Code from flask import Flask, request from flask_caching import Cache import random import string from selenium import webdriver from selenium.webdriver.chrome.options import Options from selenium.webdriver.chrome.service import Service from os import environ from time import sleep app = Flask(__name__) config = { &amp;#34;DEBUG&amp;#34;: False, &amp;#34;CACHE_TYPE&amp;#34;: &amp;#34;SimpleCache&amp;#34;, &amp;#34;CACHE_DEFAULT_TIMEOUT&amp;#34;: 300 } app.</description>
+      <description>Team : The Penetrators&#xA;Overview On a une application web flask d&amp;rsquo;affichage de citations avec la possibilité de faire consulter la citation par un bot selenium. L&amp;rsquo;objectif est de voler le cookie du bot.&#xA;Code from flask import Flask, request from flask_caching import Cache import random import string from selenium import webdriver from selenium.webdriver.chrome.options import Options from selenium.webdriver.chrome.service import Service from os import environ from time import sleep app = Flask(__name__) config = { &amp;#34;DEBUG&amp;#34;: False, &amp;#34;CACHE_TYPE&amp;#34;: &amp;#34;SimpleCache&amp;#34;, &amp;#34;CACHE_DEFAULT_TIMEOUT&amp;#34;: 300 } app.</description>
     </item>
     <item>
       <title>[PatriotCTF2023 - Web] Pick Your Starter</title>

@@ -14,12 +14,12 @@
     
     <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="[MidnightCTF2024 - Web] Cachecache"/>
 <meta name="twitter:description" content="Team : The Penetrators
-Overview On a une application web flask d&rsquo;affichage de notes avec la possibilité de faire consulter les notes par un bot selenium. L&rsquo;objectif est de voler le cookie du bot.
+Overview On a une application web flask d&rsquo;affichage de citations avec la possibilité de faire consulter la citation par un bot selenium. L&rsquo;objectif est de voler le cookie du bot.
 Code from flask import Flask, request from flask_caching import Cache import random import string from selenium import webdriver from selenium.webdriver.chrome.options import Options from selenium.webdriver.chrome.service import Service from os import environ from time import sleep app = Flask(__name__) config = { &#34;DEBUG&#34;: False, &#34;CACHE_TYPE&#34;: &#34;SimpleCache&#34;, &#34;CACHE_DEFAULT_TIMEOUT&#34;: 300 } app."/>
 
     <meta property="og:title" content="[MidnightCTF2024 - Web] Cachecache" />
 <meta property="og:description" content="Team : The Penetrators
-Overview On a une application web flask d&rsquo;affichage de notes avec la possibilité de faire consulter les notes par un bot selenium. L&rsquo;objectif est de voler le cookie du bot.
+Overview On a une application web flask d&rsquo;affichage de citations avec la possibilité de faire consulter la citation par un bot selenium. L&rsquo;objectif est de voler le cookie du bot.
 Code from flask import Flask, request from flask_caching import Cache import random import string from selenium import webdriver from selenium.webdriver.chrome.options import Options from selenium.webdriver.chrome.service import Service from os import environ from time import sleep app = Flask(__name__) config = { &#34;DEBUG&#34;: False, &#34;CACHE_TYPE&#34;: &#34;SimpleCache&#34;, &#34;CACHE_DEFAULT_TIMEOUT&#34;: 300 } app." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://chrootcommit.github.io/posts/midnightctf2024-web-cachecache/" /><meta property="article:section" content="posts" />
@@ -86,7 +86,7 @@ Code from flask import Flask, request from flask_caching import Cache import ran
     <div class="post-content">
       <p>Team : The Penetrators</p>
 <h1 id="overview">Overview</h1>
-<p>On a une application web flask d&rsquo;affichage de notes avec la possibilité de faire consulter les notes par un bot selenium.
+<p>On a une application web flask d&rsquo;affichage de citations avec la possibilité de faire consulter la citation par un bot selenium.
 L&rsquo;objectif est de voler le cookie du bot.</p>
 <h1 id="code">Code</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> flask <span style="color:#f92672">import</span> Flask, request
