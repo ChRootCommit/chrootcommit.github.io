@@ -6,31 +6,21 @@
     <description>Recent content in PatriotCTF2023 on chrootcommit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Sep 2023 16:54:19 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/patriotctf2023/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 16:54:19 -0400</lastBuildDate>
+    <atom:link href="https://chrootcommit.github.io/tags/patriotctf2023/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[PatriotCTF2023 - Web] Pick Your Starter</title>
       <link>https://chrootcommit.github.io/posts/patriotctf2023_pick-your-starter/</link>
       <pubDate>Mon, 11 Sep 2023 16:54:19 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/patriotctf2023_pick-your-starter/</guid>
-      <description>Team: XxxPassword123xxX
-Difficulty: medium
-Overview Lorsque l&amp;rsquo;on entre un endpoint qui n&amp;rsquo;existe pas l&amp;rsquo;erreur 404 se déclenche et affiche notre endpoint.
-Exploitation de SSTI On tente l&amp;rsquo;injection du calcul 7*7 pour s&amp;rsquo;assurer que l&amp;rsquo;on se trouve sur une SSTI :
-BlackList Après plusieurs tests, on constate que l&amp;rsquo;application web blacklist un ensemble de termes et de caractères en renvoyant &amp;ldquo;that&amp;rsquo;s not a starter&amp;rdquo;. Voici une liste de caractères filtrés :</description>
+      <description>Team: XxxPassword123xxX&#xA;Difficulty: medium&#xA;Overview Lorsque l&amp;rsquo;on entre un endpoint qui n&amp;rsquo;existe pas l&amp;rsquo;erreur 404 se déclenche et affiche notre endpoint.&#xA;Exploitation de SSTI On tente l&amp;rsquo;injection du calcul 7*7 pour s&amp;rsquo;assurer que l&amp;rsquo;on se trouve sur une SSTI :&#xA;BlackList Après plusieurs tests, on constate que l&amp;rsquo;application web blacklist un ensemble de termes et de caractères en renvoyant &amp;ldquo;that&amp;rsquo;s not a starter&amp;rdquo;. Voici une liste de caractères filtrés :</description>
     </item>
-    
     <item>
       <title>[PatriotCTF2023 - Web] flower Shop</title>
       <link>https://chrootcommit.github.io/posts/patriotctf2023_flower-shop/</link>
       <pubDate>Mon, 11 Sep 2023 15:15:15 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/patriotctf2023_flower-shop/</guid>
-      <description>Team: XxxPassword123xxX
-Difficulty: medium
-Overview On a une application web dont on a accès au code source. Cette WebApp permet d&amp;rsquo;inscrire/s&amp;rsquo;authenfier et de réinitialiser son mot de passe. A l&amp;rsquo;inscription on fournit le webhook permettant de recevoir son nouveau mot de passe en cas de réinitialisation de ce dernier. Notre objectif est de pouvoir lire le fichier admin.php et récupérer le flag à l&amp;rsquo;intérieur.
-Analyse de code Filtre de l&amp;rsquo;input de webhook En analysant le code, on peut apercevoir un filtre sur la validation du format du webhook :</description>
+      <description>Team: XxxPassword123xxX&#xA;Difficulty: medium&#xA;Overview On a une application web dont on a accès au code source. Cette WebApp permet d&amp;rsquo;inscrire/s&amp;rsquo;authenfier et de réinitialiser son mot de passe. A l&amp;rsquo;inscription on fournit le webhook permettant de recevoir son nouveau mot de passe en cas de réinitialisation de ce dernier. Notre objectif est de pouvoir lire le fichier admin.php et récupérer le flag à l&amp;rsquo;intérieur.&#xA;Analyse de code Filtre de l&amp;rsquo;input de webhook En analysant le code, on peut apercevoir un filtre sur la validation du format du webhook :</description>
     </item>
-    
   </channel>
 </rss>

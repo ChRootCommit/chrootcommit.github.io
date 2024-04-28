@@ -6,17 +6,14 @@
     <description>Recent content in HTB on chrootcommit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/htb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chrootcommit.github.io/tags/htb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[FR] HTB - Wrong Spooky Season</title>
       <link>https://chrootcommit.github.io/posts/2023-03-01-hackthebox-wrong_spooky_season/</link>
       <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/2023-03-01-hackthebox-wrong_spooky_season/</guid>
-      <description>HTB - Wrong Spooky Season
-Catégorie : Forensic
-Enoncé : &amp;ldquo;I told them it was too soon and in the wrong season to deploy such a website, but they assured me that theming it properly would be enough to stop the ghosts from haunting us. I was wrong.&amp;rdquo; Now there is an internal breach in the Spooky Network and you need to find out what happened. Analyze the the network traffic and find how the scary ghosts got in and what they did.</description>
+      <description>HTB - Wrong Spooky Season&#xA;Catégorie : Forensic&#xA;Enoncé : &amp;ldquo;I told them it was too soon and in the wrong season to deploy such a website, but they assured me that theming it properly would be enough to stop the ghosts from haunting us. I was wrong.&amp;rdquo; Now there is an internal breach in the Spooky Network and you need to find out what happened. Analyze the the network traffic and find how the scary ghosts got in and what they did.</description>
     </item>
-    
   </channel>
 </rss>

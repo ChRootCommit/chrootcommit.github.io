@@ -4,15 +4,15 @@
     <title>[DUCTF2023 - Web] Proxed // chrootcommit</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.113.0">
+    <meta name="generator" content="Hugo 0.124.1">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="chrootcommit" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/css/main.min.1fe426fd82899b3823133b4b6fadb0e1f0d8332eecc710a4dfe43101ac5895e0.css" />
+    <link rel="stylesheet" href="/css/main.min.4743f052c32dac5ef397f32c14bda832463022dc1f4b64e6f4bebd125456947c.css" />
+    
 
     
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[DUCTF2023 - Web] Proxed"/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="[DUCTF2023 - Web] Proxed"/>
 <meta name="twitter:description" content="Team: XxxPassword123xxX
 Difficulty: easy
 Code analysis package main import ( &#34;flag&#34; &#34;fmt&#34; &#34;log&#34; &#34;net/http&#34; &#34;os&#34; &#34;strings&#34; ) var ( port = flag.Int(&#34;port&#34;, 8081, &#34;The port to listen on&#34;) ) func main() { flag.Parse() http.HandleFunc(&#34;/&#34;, func(w http.ResponseWriter, r *http.Request) { xff := r.Header.Values(&#34;X-Forwarded-For&#34;) ip := strings.Split(r.RemoteAddr, &#34;:&#34;)[0] if xff != nil { ips := strings.Split(xff[len(xff)-1], &#34;, &#34;) ip = ips[len(ips)-1] ip = strings.TrimSpace(ip) } if ip != &#34;31.33.33.7&#34; { message := fmt."/>

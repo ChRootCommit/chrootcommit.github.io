@@ -6,41 +6,28 @@
     <description>Recent content in HeroCTFv5 on chrootcommit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 May 2023 19:31:35 -0400</lastBuildDate><atom:link href="https://chrootcommit.github.io/tags/heroctfv5/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 May 2023 19:31:35 -0400</lastBuildDate>
+    <atom:link href="https://chrootcommit.github.io/tags/heroctfv5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[HeroCTFv5 - Web] Blogodogo1</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-blogodogo1/</link>
       <pubDate>Sun, 14 May 2023 19:31:35 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/heroctfv5-blogodogo1/</guid>
-      <description>under B0rn2PwnCTF team
-Overview Try to see the content of the secret note of the administator user.
-(We have the website&amp;rsquo;s source code)
-Idor exploitation We can try to enumerate all author&amp;rsquo;s id to find the admin&amp;rsquo;s posts. Here, we used burp intruder with sniper as attack type and payload of numbers :
-Generate time based hash of a post It sounds good, we found the admin&amp;rsquo;s Secret blog post, but this last was indicated as draft and we could not access to the draft post of another user.</description>
+      <description>under B0rn2PwnCTF team&#xA;Overview Try to see the content of the secret note of the administator user.&#xA;(We have the website&amp;rsquo;s source code)&#xA;Idor exploitation We can try to enumerate all author&amp;rsquo;s id to find the admin&amp;rsquo;s posts. Here, we used burp intruder with sniper as attack type and payload of numbers :&#xA;Generate time based hash of a post It sounds good, we found the admin&amp;rsquo;s Secret blog post, but this last was indicated as draft and we could not access to the draft post of another user.</description>
     </item>
-    
     <item>
       <title>[HeroCTFv5 - Web] DrinkFromMyFlask1</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-drinkfrommyflask1/</link>
       <pubDate>Sun, 14 May 2023 18:49:09 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/heroctfv5-drinkfrommyflask1/</guid>
-      <description>under B0rn2PwnCTF team
-Overview A friend of yours got into an argument with a flask developer. He tried handling it himself, but he somehow got his nose broken in the process&amp;hellip; Can you put your hacker skills to good use and help him out?
-You should probably be able to access the server hosting your target&amp;rsquo;s last project, shouldn&amp;rsquo;t you ? I heard is making a lost of programming mistakes&amp;hellip;</description>
+      <description>under B0rn2PwnCTF team&#xA;Overview A friend of yours got into an argument with a flask developer. He tried handling it himself, but he somehow got his nose broken in the process&amp;hellip; Can you put your hacker skills to good use and help him out?&#xA;You should probably be able to access the server hosting your target&amp;rsquo;s last project, shouldn&amp;rsquo;t you ? I heard is making a lost of programming mistakes&amp;hellip;</description>
     </item>
-    
     <item>
       <title>[HeroCTFv5 - Web] Best Schools</title>
       <link>https://chrootcommit.github.io/posts/heroctfv5-best-school/</link>
       <pubDate>Sun, 14 May 2023 18:06:23 -0400</pubDate>
-      
       <guid>https://chrootcommit.github.io/posts/heroctfv5-best-school/</guid>
-      <description>under B0rn2PwnCTF team
-Overview An anonymous company has decided to publish a ranking of the best schools, and it is based on the number of clicks on a button! Make sure you get the &amp;lsquo;Flag CyberSecurity School&amp;rsquo; in first place and you&amp;rsquo;ll get your reward!
-Detect vulnerable source code function updateNbClick(schoolName) { var updated_school = []; fetch(&amp;#34;/graphql&amp;#34;, { method: &amp;#34;POST&amp;#34;, headers:{ &amp;#34;Content-Type&amp;#34;: &amp;#34;application/json&amp;#34;, &amp;#34;Accept&amp;#34;: &amp;#34;application/json&amp;#34; }, body: JSON.stringify({query: `mutation { increaseClickSchool(schoolName: &amp;#34;${schoolName}&amp;#34;){schoolId, nbClick} }`}) }).</description>
+      <description>under B0rn2PwnCTF team&#xA;Overview An anonymous company has decided to publish a ranking of the best schools, and it is based on the number of clicks on a button! Make sure you get the &amp;lsquo;Flag CyberSecurity School&amp;rsquo; in first place and you&amp;rsquo;ll get your reward!&#xA;Detect vulnerable source code function updateNbClick(schoolName) { var updated_school = []; fetch(&amp;#34;/graphql&amp;#34;, { method: &amp;#34;POST&amp;#34;, headers:{ &amp;#34;Content-Type&amp;#34;: &amp;#34;application/json&amp;#34;, &amp;#34;Accept&amp;#34;: &amp;#34;application/json&amp;#34; }, body: JSON.stringify({query: `mutation { increaseClickSchool(schoolName: &amp;#34;${schoolName}&amp;#34;){schoolId, nbClick} }`}) }).</description>
     </item>
-    
   </channel>
 </rss>
